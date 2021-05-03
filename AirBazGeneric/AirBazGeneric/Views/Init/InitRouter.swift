@@ -14,7 +14,7 @@ class InitRouter: InitWireframeProtocol {
 
     weak var viewController: UIViewController?
     
-    static func createModule(name: String, surname: String, accountNumber: String, color: UIColor) -> UIViewController {
+    static func createModule(name: String, surname: String, accountNumber: String, color: String) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = InitViewController(nibName: "InitViewController", bundle: nil)
         view.name = name

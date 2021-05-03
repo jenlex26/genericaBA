@@ -25,9 +25,9 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     @IBOutlet weak var colorSegmentedControl: UISegmentedControl!
     
     //MARK: - Properties
-    let colors: [UIColor] = [UIColor(red: 0.00, green: 0.53, blue: 0.21, alpha: 1.00),
-                             UIColor(red: 0.98, green: 1.00, blue: 0.00, alpha: 1.00),
-                             UIColor(red: 1.00, green: 0.48, blue: 0.18, alpha: 1.00)]
+    let colors: [Colors] = [Colors(hex: "#006242", color: UIColor(red: 0.00, green: 0.38, blue: 0.26, alpha: 1.00)),
+                            Colors(hex: "#283F8F", color: UIColor(red: 0.16, green: 0.25, blue: 0.56, alpha: 1.00)),
+                            Colors(hex: "#FFDC26", color: UIColor(red: 1.00, green: 0.86, blue: 0.15, alpha: 1.00))]
 
     //MARK: - Life cycle
 	override func viewDidLoad() {
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     
     @available(iOS 13.0, *)
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        sender.selectedSegmentTintColor = colors[sender.selectedSegmentIndex]
+        sender.selectedSegmentTintColor = colors[sender.selectedSegmentIndex].color
     }
 
 }
@@ -109,7 +109,7 @@ extension LoginViewController {
     }
     
     func areTextFieldsWithText(name: String, surname: String, accountNumber: String) {
-        let color = colors[colorSegmentedControl.selectedSegmentIndex]
+        let color = colors[colorSegmentedControl.selectedSegmentIndex].hex
         let initView = InitRouter.createModule(name: name, surname: surname, accountNumber: accountNumber, color: color)
         self.navigationController?.pushViewController(initView, animated: true)
     }

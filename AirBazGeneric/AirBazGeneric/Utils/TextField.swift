@@ -58,4 +58,3 @@ public class TextField: UITextField {
         self.attributedPlaceholder = placeholderString
     }
 }
-

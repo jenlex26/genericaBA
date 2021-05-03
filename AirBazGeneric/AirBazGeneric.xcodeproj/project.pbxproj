@@ -29,6 +29,7 @@
 		A59EEB902639B36B001477CD /* InitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB8A2639B36B001477CD /* InitViewController.xib */; };
 		A59EEC1E2639D772001477CD /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
 		A59EEC1F2639D772001477CD /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8A9AA2640777D00FF58EC /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,7 @@
 		A59EEB892639B36B001477CD /* InitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitInteractor.swift; sourceTree = "<group>"; };
 		A59EEB8A2639B36B001477CD /* InitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitViewController.xib; sourceTree = "<group>"; };
 		A59EEBC42639BB66001477CD /* WalletSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WalletSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A8A9AA2640777D00FF58EC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		A59EEB6C2639B320001477CD /* AirBazGeneric */ = {
 			isa = PBXGroup;
 			children = (
+				A5A8A9A92640777500FF58EC /* Models */,
 				A528E664263C702300B76EDF /* Utils */,
 				A59EEB842639B35C001477CD /* Views */,
 				A59EEB6D2639B320001477CD /* AppDelegate.swift */,
@@ -179,6 +182,14 @@
 				A528E656263C6E8300B76EDF /* Init */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A5A8A9A92640777500FF58EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5A8A9AA2640777D00FF58EC /* Colors.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B380EB6896CECCA14CBE815D /* Frameworks */ = {
@@ -315,6 +326,7 @@
 				A528E672263D082D00B76EDF /* Rechability.swift in Sources */,
 				A59EEB8E2639B36B001477CD /* InitProtocols.swift in Sources */,
 				A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */,
+				A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */,
 				A59EEB8B2639B36B001477CD /* InitPresenter.swift in Sources */,
 				A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */,
 				A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */,

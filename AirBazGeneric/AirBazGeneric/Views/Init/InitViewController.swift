@@ -22,7 +22,7 @@ class InitViewController: UIViewController, InitViewProtocol {
     var name: String!
     var surname: String!
     var accountNumber: String!
-    var color: UIColor!
+    var color: String!
     
     //MARK: - Life cycle
 	override func viewDidLoad() {
@@ -42,7 +42,7 @@ class InitViewController: UIViewController, InitViewProtocol {
                                                   longitude: -99.2037942,
                                                   userName: "hgonzalez",
                                                   phone: 5510518955,
-                                                  radioColor: "#117243",
+                                                  radioColor: color,
                                                   selfColor: "#2C7B89")
         
         addChild(airBazView)
