@@ -9,6 +9,9 @@ import UIKit
 
 public class TextField: UITextField {
 
+    //MARK: - @IBInspectable
+    @IBInspectable var placeholderText: String!
+    
     //MARK: - Properties
     let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 18)
     
@@ -23,7 +26,12 @@ public class TextField: UITextField {
         commonInit()
     }
     
-    //MARK: - Methods
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        
+        changePlaceholder()
+    }
+    
     override public func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
@@ -36,10 +44,18 @@ public class TextField: UITextField {
         return bounds.inset(by: padding)
     }
     
+    //MARK: - Methods
     private func commonInit() {
         self.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
         self.borderStyle = .none
         self.setCorner(cornerRadius: 10.0)
+    }
+    
+    private func changePlaceholder() {
+        let placeholderString = NSAttributedString(string: placeholderText,
+                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        
+        self.attributedPlaceholder = placeholderString
     }
 }
 

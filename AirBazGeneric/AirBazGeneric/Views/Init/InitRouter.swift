@@ -14,9 +14,14 @@ class InitRouter: InitWireframeProtocol {
 
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(name: String, surname: String, accountNumber: String, color: UIColor) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = InitViewController(nibName: "InitViewController", bundle: nil)
+        view.name = name
+        view.surname = surname
+        view.accountNumber = accountNumber
+        view.color = color
+        
         let interactor = InitInteractor()
         let router = InitRouter()
         let presenter = InitPresenter(interface: view, interactor: interactor, router: router)

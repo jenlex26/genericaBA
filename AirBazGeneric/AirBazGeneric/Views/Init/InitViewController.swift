@@ -22,7 +22,8 @@ class InitViewController: UIViewController, InitViewProtocol {
     var name: String!
     var surname: String!
     var accountNumber: String!
-
+    var color: UIColor!
+    
     //MARK: - Life cycle
 	override func viewDidLoad() {
         super.viewDidLoad()

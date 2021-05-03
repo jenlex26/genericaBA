@@ -22,27 +22,18 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     @IBOutlet weak var requiredApPatLabel: UILabel!
     @IBOutlet weak var requiredAccountNumberLabel: UILabel!
     @IBOutlet weak var discoverButton: UIButton!
+    @IBOutlet weak var colorSegmentedControl: UISegmentedControl!
+    
+    //MARK: - Properties
+    let colors: [UIColor] = [UIColor(red: 0.00, green: 0.53, blue: 0.21, alpha: 1.00),
+                             UIColor(red: 0.98, green: 1.00, blue: 0.00, alpha: 1.00),
+                             UIColor(red: 1.00, green: 0.48, blue: 0.18, alpha: 1.00)]
 
     //MARK: - Life cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         setView()
-    }
-    
-    //MARK: - Methods
-    private func setView() {
-        discoverButton.setCorner(cornerRadius: 10.0)
-        nameTextField.delegate = self
-        surnameTextField.delegate = self
-        accountNumberTextField.delegate = self
-    }
-    
-    private func hideKeyboard() {
-        nameTextField.resignFirstResponder()
-        surnameTextField.resignFirstResponder()
-        accountNumberTextField.resignFirstResponder()
-        ViewAnimation.init(y: 0, viewMove: self.view).animation()
     }
     
     //MARK: - @IBActions
@@ -53,6 +44,11 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     @IBAction func discoverAction(_ sender: UIButton) {
         hideKeyboard()
         presenter?.checkTextFields(nameText: nameTextField.text, surnameText: surnameTextField.text, accountNumber: accountNumberTextField.text)
+    }
+    
+    @available(iOS 13.0, *)
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        sender.selectedSegmentTintColor = colors[sender.selectedSegmentIndex]
     }
 
 }
@@ -113,10 +109,25 @@ extension LoginViewController {
     }
     
     func areTextFieldsWithText(name: String, surname: String, accountNumber: String) {
-        let initView = InitRouter.createModule() as! InitViewController
-        initView.name = name
-        initView.surname = surname
-        initView.accountNumber = accountNumber
+        let color = colors[colorSegmentedControl.selectedSegmentIndex]
+        let initView = InitRouter.createModule(name: name, surname: surname, accountNumber: accountNumber, color: color)
         self.navigationController?.pushViewController(initView, animated: true)
+    }
+}
+
+//MARK: - Private Methods
+extension LoginViewController {
+    private func setView() {
+        discoverButton.setCorner(cornerRadius: 10.0)
+        nameTextField.delegate = self
+        surnameTextField.delegate = self
+        accountNumberTextField.delegate = self
+    }
+    
+    private func hideKeyboard() {
+        nameTextField.resignFirstResponder()
+        surnameTextField.resignFirstResponder()
+        accountNumberTextField.resignFirstResponder()
+        ViewAnimation.init(y: 0, viewMove: self.view).animation()
     }
 }

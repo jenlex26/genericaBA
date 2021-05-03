@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="AirBazGeneric" customModuleProvider="target">
             <connections>
                 <outlet property="accountNumberTextField" destination="SOf-Et-VT2" id="BoE-lZ-daQ"/>
+                <outlet property="colorSegmentedControl" destination="xgp-J4-tdM" id="e54-mY-vID"/>
                 <outlet property="discoverButton" destination="wAn-Vi-3zk" id="nnV-aT-zZe"/>
                 <outlet property="nameTextField" destination="9Xi-Ob-1vA" id="vRT-my-HoW"/>
                 <outlet property="requiredAccountNumberLabel" destination="ojL-Jq-SOJ" id="S6n-uv-6iA"/>
@@ -32,7 +33,7 @@
                         <constraint firstAttribute="height" constant="120" id="zQg-su-qqG"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-Ob-1vA" customClass="TextField" customModule="AirBazGeneric" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-Ob-1vA" customClass="TextField" customModule="AirBazGeneric" customModuleProvider="target">
                     <rect key="frame" x="40" y="200" width="295" height="50"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -41,6 +42,9 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="name"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Nombre"/>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido Paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDR-5b-uwo" customClass="TextField" customModule="AirBazGeneric" customModuleProvider="target">
                     <rect key="frame" x="40" y="284.5" width="295" height="50"/>
@@ -51,6 +55,9 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="additional-name"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Apellido Paterno"/>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuenta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-Et-VT2" customClass="TextField" customModule="AirBazGeneric" customModuleProvider="target">
                     <rect key="frame" x="40" y="369" width="295" height="50"/>
@@ -61,21 +68,10 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" textContentType="cc-number"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Cuenta"/>
+                    </userDefinedRuntimeAttributes>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAn-Vi-3zk">
-                    <rect key="frame" x="40" y="483.5" width="295" height="50"/>
-                    <color key="backgroundColor" red="0.24075343388401102" green="0.52075950386597936" blue="0.24933861502233584" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="5zU-ve-4at"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
-                    <state key="normal" title="Descubrir">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="discoverAction:" destination="-1" eventType="touchUpInside" id="eMs-hf-MzU"/>
-                    </connections>
-                </button>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Campo requerido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKF-Ka-JdH">
                     <rect key="frame" x="40" y="250" width="295" height="14.5"/>
                     <constraints>
@@ -103,6 +99,32 @@
                     <color key="textColor" red="1" green="0.30411316129999999" blue="0.28716027420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAn-Vi-3zk">
+                    <rect key="frame" x="40" y="534.5" width="295" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.52941176470588236" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5zU-ve-4at"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                    <state key="normal" title="Descubrir">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="discoverAction:" destination="-1" eventType="touchUpInside" id="eMs-hf-MzU"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xgp-J4-tdM">
+                    <rect key="frame" x="40" y="453.5" width="295" height="32"/>
+                    <segments>
+                        <segment title="Banco Azteca"/>
+                        <segment title="Elektra"/>
+                        <segment title="Tiendas Neto"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" red="0.0" green="0.52941176470588236" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="gsu-fv-Ym8"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="pni-mN-1zQ"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -110,7 +132,9 @@
             <constraints>
                 <constraint firstItem="wAn-Vi-3zk" firstAttribute="leading" secondItem="9Xi-Ob-1vA" secondAttribute="leading" id="4ek-If-PJ7"/>
                 <constraint firstItem="SOf-Et-VT2" firstAttribute="top" secondItem="f1a-Zt-9n5" secondAttribute="bottom" constant="20" id="4wb-a8-sBh"/>
+                <constraint firstItem="xgp-J4-tdM" firstAttribute="trailing" secondItem="9Xi-Ob-1vA" secondAttribute="trailing" id="9HI-OK-7Rr"/>
                 <constraint firstItem="ojL-Jq-SOJ" firstAttribute="leading" secondItem="SOf-Et-VT2" secondAttribute="leading" id="9nM-IW-uFf"/>
+                <constraint firstItem="xgp-J4-tdM" firstAttribute="leading" secondItem="9Xi-Ob-1vA" secondAttribute="leading" id="Amf-zR-PmO"/>
                 <constraint firstItem="f1a-Zt-9n5" firstAttribute="leading" secondItem="QDR-5b-uwo" secondAttribute="leading" id="Ehw-EK-rrn"/>
                 <constraint firstItem="f1a-Zt-9n5" firstAttribute="top" secondItem="QDR-5b-uwo" secondAttribute="bottom" id="F6z-CA-Nrg"/>
                 <constraint firstItem="SOf-Et-VT2" firstAttribute="leading" secondItem="9Xi-Ob-1vA" secondAttribute="leading" id="HaW-JQ-seD"/>
@@ -122,9 +146,10 @@
                 <constraint firstItem="QDR-5b-uwo" firstAttribute="top" secondItem="XKF-Ka-JdH" secondAttribute="bottom" constant="20" id="aZ7-Aa-Svr"/>
                 <constraint firstItem="0SE-Ga-bAe" firstAttribute="top" secondItem="pni-mN-1zQ" secondAttribute="top" constant="30" id="aaK-1O-y8e"/>
                 <constraint firstItem="f1a-Zt-9n5" firstAttribute="trailing" secondItem="QDR-5b-uwo" secondAttribute="trailing" id="bbH-rw-J81"/>
+                <constraint firstItem="wAn-Vi-3zk" firstAttribute="top" secondItem="xgp-J4-tdM" secondAttribute="bottom" constant="50" id="ch8-hG-yRL"/>
                 <constraint firstItem="QDR-5b-uwo" firstAttribute="trailing" secondItem="9Xi-Ob-1vA" secondAttribute="trailing" id="kjL-4f-R3n"/>
-                <constraint firstItem="wAn-Vi-3zk" firstAttribute="top" secondItem="ojL-Jq-SOJ" secondAttribute="bottom" constant="50" id="kwJ-9U-vti"/>
                 <constraint firstItem="XKF-Ka-JdH" firstAttribute="trailing" secondItem="9Xi-Ob-1vA" secondAttribute="trailing" id="oDG-wN-B11"/>
+                <constraint firstItem="xgp-J4-tdM" firstAttribute="top" secondItem="ojL-Jq-SOJ" secondAttribute="bottom" constant="20" id="rIv-6W-yeN"/>
                 <constraint firstItem="XKF-Ka-JdH" firstAttribute="top" secondItem="9Xi-Ob-1vA" secondAttribute="bottom" id="sdO-D2-rQb"/>
                 <constraint firstItem="9Xi-Ob-1vA" firstAttribute="leading" secondItem="pni-mN-1zQ" secondAttribute="leading" constant="40" id="tFj-Ea-oev"/>
                 <constraint firstItem="ojL-Jq-SOJ" firstAttribute="top" secondItem="SOf-Et-VT2" secondAttribute="bottom" id="uJs-kD-dsP"/>
@@ -135,7 +160,7 @@
             <connections>
                 <outletCollection property="gestureRecognizers" destination="Ka7-yl-Vgp" appends="YES" id="I02-J4-x3A"/>
             </connections>
-            <point key="canvasLocation" x="140" y="83"/>
+            <point key="canvasLocation" x="140" y="82.3088455772114"/>
         </view>
         <tapGestureRecognizer id="Ka7-yl-Vgp">
             <connections>
