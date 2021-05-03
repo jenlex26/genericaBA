@@ -117,8 +117,8 @@
                     <rect key="frame" x="40" y="453.5" width="295" height="32"/>
                     <segments>
                         <segment title="Banco Azteca"/>
+                        <segment title="Italika"/>
                         <segment title="Elektra"/>
-                        <segment title="Tiendas Neto"/>
                     </segments>
                     <color key="selectedSegmentTintColor" red="0.0" green="0.52941176470588236" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
