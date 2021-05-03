@@ -122,6 +122,8 @@ extension LoginViewController {
         nameTextField.delegate = self
         surnameTextField.delegate = self
         accountNumberTextField.delegate = self
+        colorSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white],
+                                                     for: UIControl.State.selected)
     }
     
     private func hideKeyboard() {
