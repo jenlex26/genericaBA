@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import WalletSDK
 
 class LoginViewController: UIViewController, LoginViewProtocol {
 
@@ -110,20 +111,32 @@ extension LoginViewController {
     
     func areTextFieldsWithText(name: String, surname: String, accountNumber: String) {
         let color = colors[colorSegmentedControl.selectedSegmentIndex].hex
-        let initView = InitRouter.createModule(name: name, surname: surname, accountNumber: accountNumber, color: color)
-        self.navigationController?.pushViewController(initView, animated: true)
+        let rechability = Reachability.isConnectedToNetwork()
+        let airBazView = WalletSDKInit.openWallet(rechability: rechability,
+                                                  accountNumber: accountNumber,
+                                                  name: name,
+                                                  apPat: surname,
+                                                  latitude: 19.3047057,
+                                                  longitude: -99.2037942,
+                                                  userName: "hgonzalez",
+                                                  phone: 5510518955,
+                                                  radioColor: color,
+                                                  selfColor: color)
+        
+        self.navigationController?.pushViewController(airBazView, animated: true)
     }
 }
 
 //MARK: - Private Methods
 extension LoginViewController {
     private func setView() {
+        colorSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white],
+                                                     for: UIControl.State.selected)
+        
         discoverButton.setCorner(cornerRadius: 10.0)
         nameTextField.delegate = self
         surnameTextField.delegate = self
         accountNumberTextField.delegate = self
-        colorSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white],
-                                                     for: UIControl.State.selected)
     }
     
     private func hideKeyboard() {

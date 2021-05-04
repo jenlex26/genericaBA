@@ -21,12 +21,6 @@
 		A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB6D2639B320001477CD /* AppDelegate.swift */; };
 		A59EEB772639B321001477CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB762639B321001477CD /* Assets.xcassets */; };
 		A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB782639B321001477CD /* LaunchScreen.storyboard */; };
-		A59EEB8B2639B36B001477CD /* InitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB852639B36B001477CD /* InitPresenter.swift */; };
-		A59EEB8C2639B36B001477CD /* InitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB862639B36B001477CD /* InitRouter.swift */; };
-		A59EEB8D2639B36B001477CD /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB872639B36B001477CD /* InitViewController.swift */; };
-		A59EEB8E2639B36B001477CD /* InitProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB882639B36B001477CD /* InitProtocols.swift */; };
-		A59EEB8F2639B36B001477CD /* InitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB892639B36B001477CD /* InitInteractor.swift */; };
-		A59EEB902639B36B001477CD /* InitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB8A2639B36B001477CD /* InitViewController.xib */; };
 		A59EEC1E2639D772001477CD /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
 		A59EEC1F2639D772001477CD /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8A9AA2640777D00FF58EC /* Colors.swift */; };
@@ -65,12 +59,6 @@
 		A59EEB762639B321001477CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A59EEB792639B321001477CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A59EEB7B2639B321001477CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A59EEB852639B36B001477CD /* InitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitPresenter.swift; sourceTree = "<group>"; };
-		A59EEB862639B36B001477CD /* InitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitRouter.swift; sourceTree = "<group>"; };
-		A59EEB872639B36B001477CD /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
-		A59EEB882639B36B001477CD /* InitProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitProtocols.swift; sourceTree = "<group>"; };
-		A59EEB892639B36B001477CD /* InitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitInteractor.swift; sourceTree = "<group>"; };
-		A59EEB8A2639B36B001477CD /* InitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitViewController.xib; sourceTree = "<group>"; };
 		A59EEBC42639BB66001477CD /* WalletSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WalletSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A8A9AA2640777D00FF58EC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,19 +84,6 @@
 			);
 			name = Pods;
 			path = ../Pods;
-			sourceTree = "<group>";
-		};
-		A528E656263C6E8300B76EDF /* Init */ = {
-			isa = PBXGroup;
-			children = (
-				A59EEB852639B36B001477CD /* InitPresenter.swift */,
-				A59EEB862639B36B001477CD /* InitRouter.swift */,
-				A59EEB872639B36B001477CD /* InitViewController.swift */,
-				A59EEB882639B36B001477CD /* InitProtocols.swift */,
-				A59EEB892639B36B001477CD /* InitInteractor.swift */,
-				A59EEB8A2639B36B001477CD /* InitViewController.xib */,
-			);
-			path = Init;
 			sourceTree = "<group>";
 		};
 		A528E657263C6E8B00B76EDF /* Login */ = {
@@ -179,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				A528E657263C6E8B00B76EDF /* Login */,
-				A528E656263C6E8300B76EDF /* Init */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,7 +238,6 @@
 				A528E663263C6E9500B76EDF /* LoginViewController.xib in Resources */,
 				A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */,
 				A59EEB772639B321001477CD /* Assets.xcassets in Resources */,
-				A59EEB902639B36B001477CD /* InitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,17 +295,12 @@
 				A528E662263C6E9500B76EDF /* LoginInteractor.swift in Sources */,
 				A528E661263C6E9500B76EDF /* LoginProtocols.swift in Sources */,
 				A528E668263C704500B76EDF /* TextField.swift in Sources */,
-				A59EEB8F2639B36B001477CD /* InitInteractor.swift in Sources */,
 				A528E672263D082D00B76EDF /* Rechability.swift in Sources */,
-				A59EEB8E2639B36B001477CD /* InitProtocols.swift in Sources */,
 				A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */,
 				A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */,
-				A59EEB8B2639B36B001477CD /* InitPresenter.swift in Sources */,
 				A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */,
 				A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */,
-				A59EEB8D2639B36B001477CD /* InitViewController.swift in Sources */,
 				A528E65F263C6E9500B76EDF /* LoginRouter.swift in Sources */,
-				A59EEB8C2639B36B001477CD /* InitRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
