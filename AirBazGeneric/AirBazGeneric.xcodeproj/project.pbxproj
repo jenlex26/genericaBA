@@ -18,6 +18,27 @@
 		A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E66A263C708900B76EDF /* UIViewExtension.swift */; };
 		A528E66D263C78EE00B76EDF /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E66C263C78EE00B76EDF /* ViewAnimation.swift */; };
 		A528E672263D082D00B76EDF /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E671263D082D00B76EDF /* Rechability.swift */; };
+		A58B9B592642F2F7001664EB /* SuccsessfulTransferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */; };
+		A58B9B5A2642F2F7001664EB /* SuccsessfulTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */; };
+		A58B9B5B2642F2F7001664EB /* SuccsessfulTransferPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */; };
+		A58B9B5C2642F2F7001664EB /* SuccsessfulTransferProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B572642F2F7001664EB /* SuccsessfulTransferProtocols.swift */; };
+		A58B9B5D2642F2F7001664EB /* SuccsessfulTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B582642F2F7001664EB /* SuccsessfulTransferViewController.swift */; };
+		A58B9B722642FCD4001664EB /* SuccessfulTransferInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B712642FCD4001664EB /* SuccessfulTransferInteractor.swift */; };
+		A58B9B792642FDA3001664EB /* TransferPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B732642FDA3001664EB /* TransferPresenter.swift */; };
+		A58B9B7A2642FDA3001664EB /* TransferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B742642FDA3001664EB /* TransferRouter.swift */; };
+		A58B9B7B2642FDA3001664EB /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B752642FDA3001664EB /* TransferViewController.swift */; };
+		A58B9B7C2642FDA3001664EB /* TransferProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B762642FDA3001664EB /* TransferProtocols.swift */; };
+		A58B9B7D2642FDA3001664EB /* TransferInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B772642FDA3001664EB /* TransferInteractor.swift */; };
+		A58B9B7E2642FDA3001664EB /* TransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58B9B782642FDA3001664EB /* TransferViewController.xib */; };
+		A58B9B86264304C3001664EB /* InitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B80264304C3001664EB /* InitPresenter.swift */; };
+		A58B9B87264304C3001664EB /* InitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B81264304C3001664EB /* InitRouter.swift */; };
+		A58B9B88264304C3001664EB /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B82264304C3001664EB /* InitViewController.swift */; };
+		A58B9B89264304C3001664EB /* InitProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B83264304C3001664EB /* InitProtocols.swift */; };
+		A58B9B8A264304C3001664EB /* InitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B84264304C3001664EB /* InitInteractor.swift */; };
+		A58B9B8B264304C3001664EB /* InitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58B9B85264304C3001664EB /* InitViewController.xib */; };
+		A58B9B8F26430DDD001664EB /* CircleNameImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B8E26430DDD001664EB /* CircleNameImage.swift */; };
+		A58B9B9126430E2D001664EB /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B9026430E2D001664EB /* UIImageExtension.swift */; };
+		A58B9B9326430E4D001664EB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B9226430E4D001664EB /* UIColorExtension.swift */; };
 		A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB6D2639B320001477CD /* AppDelegate.swift */; };
 		A59EEB772639B321001477CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB762639B321001477CD /* Assets.xcassets */; };
 		A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB782639B321001477CD /* LaunchScreen.storyboard */; };
@@ -54,6 +75,27 @@
 		A528E66A263C708900B76EDF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A528E66C263C78EE00B76EDF /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
 		A528E671263D082D00B76EDF /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferRouter.swift; sourceTree = "<group>"; };
+		A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccsessfulTransferViewController.xib; sourceTree = "<group>"; };
+		A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferPresenter.swift; sourceTree = "<group>"; };
+		A58B9B572642F2F7001664EB /* SuccsessfulTransferProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferProtocols.swift; sourceTree = "<group>"; };
+		A58B9B582642F2F7001664EB /* SuccsessfulTransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferViewController.swift; sourceTree = "<group>"; };
+		A58B9B712642FCD4001664EB /* SuccessfulTransferInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulTransferInteractor.swift; sourceTree = "<group>"; };
+		A58B9B732642FDA3001664EB /* TransferPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferPresenter.swift; sourceTree = "<group>"; };
+		A58B9B742642FDA3001664EB /* TransferRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRouter.swift; sourceTree = "<group>"; };
+		A58B9B752642FDA3001664EB /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		A58B9B762642FDA3001664EB /* TransferProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferProtocols.swift; sourceTree = "<group>"; };
+		A58B9B772642FDA3001664EB /* TransferInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferInteractor.swift; sourceTree = "<group>"; };
+		A58B9B782642FDA3001664EB /* TransferViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferViewController.xib; sourceTree = "<group>"; };
+		A58B9B80264304C3001664EB /* InitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitPresenter.swift; sourceTree = "<group>"; };
+		A58B9B81264304C3001664EB /* InitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitRouter.swift; sourceTree = "<group>"; };
+		A58B9B82264304C3001664EB /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		A58B9B83264304C3001664EB /* InitProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitProtocols.swift; sourceTree = "<group>"; };
+		A58B9B84264304C3001664EB /* InitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitInteractor.swift; sourceTree = "<group>"; };
+		A58B9B85264304C3001664EB /* InitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitViewController.xib; sourceTree = "<group>"; };
+		A58B9B8E26430DDD001664EB /* CircleNameImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNameImage.swift; sourceTree = "<group>"; };
+		A58B9B9026430E2D001664EB /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		A58B9B9226430E4D001664EB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		A59EEB6A2639B320001477CD /* AirBazGeneric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirBazGeneric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59EEB6D2639B320001477CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59EEB762639B321001477CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +148,7 @@
 				A528E667263C704500B76EDF /* TextField.swift */,
 				A528E66C263C78EE00B76EDF /* ViewAnimation.swift */,
 				A528E671263D082D00B76EDF /* Rechability.swift */,
+				A58B9B8E26430DDD001664EB /* CircleNameImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -114,8 +157,49 @@
 			isa = PBXGroup;
 			children = (
 				A528E66A263C708900B76EDF /* UIViewExtension.swift */,
+				A58B9B9026430E2D001664EB /* UIImageExtension.swift */,
+				A58B9B9226430E4D001664EB /* UIColorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A553C1C42642F21300EF35B0 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				A58B9B732642FDA3001664EB /* TransferPresenter.swift */,
+				A58B9B742642FDA3001664EB /* TransferRouter.swift */,
+				A58B9B752642FDA3001664EB /* TransferViewController.swift */,
+				A58B9B762642FDA3001664EB /* TransferProtocols.swift */,
+				A58B9B772642FDA3001664EB /* TransferInteractor.swift */,
+				A58B9B782642FDA3001664EB /* TransferViewController.xib */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		A553C1C52642F21A00EF35B0 /* SuccessfulTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */,
+				A58B9B572642F2F7001664EB /* SuccsessfulTransferProtocols.swift */,
+				A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */,
+				A58B9B582642F2F7001664EB /* SuccsessfulTransferViewController.swift */,
+				A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */,
+				A58B9B712642FCD4001664EB /* SuccessfulTransferInteractor.swift */,
+			);
+			path = SuccessfulTransfer;
+			sourceTree = "<group>";
+		};
+		A58B9B7F264303EB001664EB /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				A58B9B80264304C3001664EB /* InitPresenter.swift */,
+				A58B9B81264304C3001664EB /* InitRouter.swift */,
+				A58B9B82264304C3001664EB /* InitViewController.swift */,
+				A58B9B83264304C3001664EB /* InitProtocols.swift */,
+				A58B9B84264304C3001664EB /* InitInteractor.swift */,
+				A58B9B85264304C3001664EB /* InitViewController.xib */,
+			);
+			path = Init;
 			sourceTree = "<group>";
 		};
 		A59EEB612639B320001477CD = {
@@ -153,6 +237,9 @@
 		A59EEB842639B35C001477CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A58B9B7F264303EB001664EB /* Init */,
+				A553C1C52642F21A00EF35B0 /* SuccessfulTransfer */,
+				A553C1C42642F21300EF35B0 /* Transfer */,
 				A528E657263C6E8B00B76EDF /* Login */,
 			);
 			path = Views;
@@ -237,6 +324,9 @@
 			files = (
 				A528E663263C6E9500B76EDF /* LoginViewController.xib in Resources */,
 				A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */,
+				A58B9B8B264304C3001664EB /* InitViewController.xib in Resources */,
+				A58B9B5A2642F2F7001664EB /* SuccsessfulTransferViewController.xib in Resources */,
+				A58B9B7E2642FDA3001664EB /* TransferViewController.xib in Resources */,
 				A59EEB772639B321001477CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,16 +381,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				A528E660263C6E9500B76EDF /* LoginViewController.swift in Sources */,
+				A58B9B722642FCD4001664EB /* SuccessfulTransferInteractor.swift in Sources */,
+				A58B9B87264304C3001664EB /* InitRouter.swift in Sources */,
 				A528E66D263C78EE00B76EDF /* ViewAnimation.swift in Sources */,
 				A528E662263C6E9500B76EDF /* LoginInteractor.swift in Sources */,
+				A58B9B89264304C3001664EB /* InitProtocols.swift in Sources */,
+				A58B9B7D2642FDA3001664EB /* TransferInteractor.swift in Sources */,
+				A58B9B792642FDA3001664EB /* TransferPresenter.swift in Sources */,
+				A58B9B86264304C3001664EB /* InitPresenter.swift in Sources */,
+				A58B9B5D2642F2F7001664EB /* SuccsessfulTransferViewController.swift in Sources */,
+				A58B9B592642F2F7001664EB /* SuccsessfulTransferRouter.swift in Sources */,
 				A528E661263C6E9500B76EDF /* LoginProtocols.swift in Sources */,
+				A58B9B8A264304C3001664EB /* InitInteractor.swift in Sources */,
+				A58B9B7C2642FDA3001664EB /* TransferProtocols.swift in Sources */,
 				A528E668263C704500B76EDF /* TextField.swift in Sources */,
+				A58B9B8F26430DDD001664EB /* CircleNameImage.swift in Sources */,
 				A528E672263D082D00B76EDF /* Rechability.swift in Sources */,
+				A58B9B88264304C3001664EB /* InitViewController.swift in Sources */,
+				A58B9B7B2642FDA3001664EB /* TransferViewController.swift in Sources */,
 				A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */,
+				A58B9B5B2642F2F7001664EB /* SuccsessfulTransferPresenter.swift in Sources */,
 				A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */,
+				A58B9B9326430E4D001664EB /* UIColorExtension.swift in Sources */,
 				A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */,
+				A58B9B9126430E2D001664EB /* UIImageExtension.swift in Sources */,
 				A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */,
 				A528E65F263C6E9500B76EDF /* LoginRouter.swift in Sources */,
+				A58B9B5C2642F2F7001664EB /* SuccsessfulTransferProtocols.swift in Sources */,
+				A58B9B7A2642FDA3001664EB /* TransferRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,14 +549,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AKG89JHL3V;
+				DEVELOPMENT_TEAM = S33SYN3N85;
 				INFOPLIST_FILE = AirBazGeneric/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.AirBazGeneric;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,14 +570,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AKG89JHL3V;
+				DEVELOPMENT_TEAM = S33SYN3N85;
 				INFOPLIST_FILE = AirBazGeneric/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.AirBazGeneric;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

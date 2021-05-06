@@ -26,9 +26,9 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     @IBOutlet weak var colorSegmentedControl: UISegmentedControl!
     
     //MARK: - Properties
-    let colors: [Colors] = [Colors(hex: "#006242", color: UIColor(red: 0.00, green: 0.38, blue: 0.26, alpha: 1.00)),
-                            Colors(hex: "#283F8F", color: UIColor(red: 0.16, green: 0.25, blue: 0.56, alpha: 1.00)),
-                            Colors(hex: "#FFDC26", color: UIColor(red: 1.00, green: 0.86, blue: 0.15, alpha: 1.00))]
+    let colors: [Color] = [Color(hex: "#006242", color: UIColor(red: 0.00, green: 0.38, blue: 0.26, alpha: 1.00)),
+                           Color(hex: "#283F8F", color: UIColor(red: 0.16, green: 0.25, blue: 0.56, alpha: 1.00)),
+                           Color(hex: "#FFDC26", color: UIColor(red: 1.00, green: 0.86, blue: 0.15, alpha: 1.00))]
 
     //MARK: - Life cycle
 	override func viewDidLoad() {
@@ -110,20 +110,9 @@ extension LoginViewController {
     }
     
     func areTextFieldsWithText(name: String, surname: String, accountNumber: String) {
-        let color = colors[colorSegmentedControl.selectedSegmentIndex].hex
-        let rechability = Reachability.isConnectedToNetwork()
-        let airBazView = WalletSDKInit.openWallet(rechability: rechability,
-                                                  accountNumber: accountNumber,
-                                                  name: name,
-                                                  apPat: surname,
-                                                  latitude: 19.3047057,
-                                                  longitude: -99.2037942,
-                                                  userName: "hgonzalez",
-                                                  phone: 5510518955,
-                                                  radioColor: color,
-                                                  selfColor: color)
-        
-        self.navigationController?.pushViewController(airBazView, animated: true)
+        let color = colors[colorSegmentedControl.selectedSegmentIndex]
+        let initView = InitRouter.createModule(name: name, apPat: surname, accountNumber: accountNumber, color: color)
+        self.navigationController?.pushViewController(initView, animated: true)
     }
 }
 

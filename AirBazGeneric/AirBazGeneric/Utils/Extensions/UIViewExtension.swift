@@ -14,4 +14,10 @@ extension UIView {
         self.clipsToBounds = true
     }
     
+    func addShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOffset = CGSize(width: 0.3, height: 0.5)
+        self.layer.shadowRadius = 10.0
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Colors {
+struct Color {
     let hex: String
     let color: UIColor
 }
