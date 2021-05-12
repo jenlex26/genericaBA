@@ -28,9 +28,9 @@ class LoginInteractor: LoginInteractorProtocol {
     }
     
     func checkTextFields(nameText: String?, surnameText: String?, accountNumber: String?) {
-        isNameEmpty = nameText != "" ? false : true
-        surnameIsEmpty = surnameText != "" ? false : true
-        isAccountNumber = accountNumber != "" ? false : true
+        isNameEmpty = nameText?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ? false : true
+        surnameIsEmpty = surnameText?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ? false : true
+        isAccountNumber = accountNumber?.trimmingCharacters(in: .whitespacesAndNewlines) != "" ? false : true
         
         if !isNameEmpty && !surnameIsEmpty && !isAccountNumber {
             presenter?.areTextFieldsWithText(name: nameText!, surname: surnameText!, accountNumber: accountNumber!)
