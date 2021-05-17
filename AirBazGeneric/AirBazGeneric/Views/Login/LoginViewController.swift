@@ -47,9 +47,10 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         presenter?.checkTextFields(nameText: nameTextField.text, surnameText: surnameTextField.text, accountNumber: accountNumberTextField.text)
     }
     
-    @available(iOS 13.0, *)
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        sender.selectedSegmentTintColor = colors[sender.selectedSegmentIndex].color
+        if #available(iOS 13.0, *) {
+            sender.selectedSegmentTintColor = colors[sender.selectedSegmentIndex].color
+        }
     }
 
 }

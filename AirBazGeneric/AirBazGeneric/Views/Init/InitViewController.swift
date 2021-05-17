@@ -60,6 +60,10 @@ class InitViewController: UIViewController, InitViewProtocol {
 
 //MARK: - WalletSDKDelegate
 extension InitViewController: WalletSDKDelegate {
+    func encryptTexts(texts: [String]) -> [String] {
+        return texts.map {$0.replacingOccurrences(of: "%", with: "") }
+    }
+    
     func sucessAtFindingDevice(name: String, apPat: String, accountNumber: String) {
         let transferView = TransferRouter.createModule(accountName: name, accountApPat: apPat, accountToTransfer: accountNumber, myAccountNumber: self.accountNumber)
         self.navigationController?.pushViewController(transferView, animated: true)

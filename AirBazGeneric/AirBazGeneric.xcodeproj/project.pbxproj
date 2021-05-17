@@ -42,19 +42,19 @@
 		A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EEB6D2639B320001477CD /* AppDelegate.swift */; };
 		A59EEB772639B321001477CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB762639B321001477CD /* Assets.xcassets */; };
 		A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB782639B321001477CD /* LaunchScreen.storyboard */; };
-		A59EEC1E2639D772001477CD /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
-		A59EEC1F2639D772001477CD /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8A9AA2640777D00FF58EC /* Colors.swift */; };
+		A5C40E17264C83C0000301DC /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
+		A5C40E18264C83C0000301DC /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A59EEC202639D772001477CD /* Embed Frameworks */ = {
+		A5C40E19264C83C0000301DC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A59EEC1F2639D772001477CD /* WalletSDK.framework in Embed Frameworks */,
+				A5C40E18264C83C0000301DC /* WalletSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59EEC1E2639D772001477CD /* WalletSDK.framework in Frameworks */,
+				A5C40E17264C83C0000301DC /* WalletSDK.framework in Frameworks */,
 				004E9592651C4900E8B450C8 /* Pods_AirBazGeneric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +273,8 @@
 				A59EEB662639B320001477CD /* Sources */,
 				A59EEB672639B320001477CD /* Frameworks */,
 				A59EEB682639B320001477CD /* Resources */,
-				A59EEC202639D772001477CD /* Embed Frameworks */,
 				1926C39775CE7F873D35AD1B /* [CP] Embed Pods Frameworks */,
+				A5C40E19264C83C0000301DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -549,17 +549,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S33SYN3N85;
+				DEVELOPMENT_TEAM = AK6T2859PL;
 				INFOPLIST_FILE = AirBazGeneric/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -577,10 +577,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

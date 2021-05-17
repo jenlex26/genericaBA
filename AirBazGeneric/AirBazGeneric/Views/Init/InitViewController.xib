@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -17,15 +17,12 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-FU-mkP">
-                    <rect key="frame" x="20" y="166" width="335" height="335"/>
+                    <rect key="frame" x="20" y="60" width="280" height="498"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="f4e-FU-mkP" secondAttribute="height" multiplier="1:1" id="amZ-kf-Mk7"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhp-hO-33u">
                     <rect key="frame" x="10" y="10" width="30" height="40"/>
@@ -63,13 +60,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Jhp-hO-33u" firstAttribute="leading" secondItem="239-x1-Ogi" secondAttribute="leading" constant="10" id="4fR-nS-Inv"/>
+                <constraint firstItem="f4e-FU-mkP" firstAttribute="top" secondItem="Jhp-hO-33u" secondAttribute="bottom" constant="10" id="OY4-r4-SNS"/>
                 <constraint firstAttribute="trailing" secondItem="f4e-FU-mkP" secondAttribute="trailing" constant="20" id="VXQ-KQ-fS4"/>
                 <constraint firstItem="Jhp-hO-33u" firstAttribute="top" secondItem="239-x1-Ogi" secondAttribute="top" constant="10" id="cJO-yN-llL"/>
                 <constraint firstItem="f4e-FU-mkP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="fGX-8b-Kfj"/>
-                <constraint firstItem="f4e-FU-mkP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hZX-XA-EyG"/>
+                <constraint firstItem="239-x1-Ogi" firstAttribute="bottom" secondItem="f4e-FU-mkP" secondAttribute="bottom" constant="10" id="i4g-bo-j2h"/>
                 <constraint firstItem="f4e-FU-mkP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pTJ-UM-hzw"/>
             </constraints>
-            <point key="canvasLocation" x="-170" y="77"/>
+            <point key="canvasLocation" x="-170.625" y="76.056338028169009"/>
         </view>
     </objects>
     <resources>
