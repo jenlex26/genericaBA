@@ -17,7 +17,6 @@
 		A528E668263C704500B76EDF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E667263C704500B76EDF /* TextField.swift */; };
 		A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E66A263C708900B76EDF /* UIViewExtension.swift */; };
 		A528E66D263C78EE00B76EDF /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E66C263C78EE00B76EDF /* ViewAnimation.swift */; };
-		A528E672263D082D00B76EDF /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E671263D082D00B76EDF /* Rechability.swift */; };
 		A58B9B592642F2F7001664EB /* SuccsessfulTransferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */; };
 		A58B9B5A2642F2F7001664EB /* SuccsessfulTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */; };
 		A58B9B5B2642F2F7001664EB /* SuccsessfulTransferPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */; };
@@ -74,7 +73,6 @@
 		A528E667263C704500B76EDF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A528E66A263C708900B76EDF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A528E66C263C78EE00B76EDF /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
-		A528E671263D082D00B76EDF /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferRouter.swift; sourceTree = "<group>"; };
 		A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccsessfulTransferViewController.xib; sourceTree = "<group>"; };
 		A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferPresenter.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				A528E669263C706F00B76EDF /* Extensions */,
 				A528E667263C704500B76EDF /* TextField.swift */,
 				A528E66C263C78EE00B76EDF /* ViewAnimation.swift */,
-				A528E671263D082D00B76EDF /* Rechability.swift */,
 				A58B9B8E26430DDD001664EB /* CircleNameImage.swift */,
 			);
 			path = Utils;
@@ -396,7 +393,6 @@
 				A58B9B7C2642FDA3001664EB /* TransferProtocols.swift in Sources */,
 				A528E668263C704500B76EDF /* TextField.swift in Sources */,
 				A58B9B8F26430DDD001664EB /* CircleNameImage.swift in Sources */,
-				A528E672263D082D00B76EDF /* Rechability.swift in Sources */,
 				A58B9B88264304C3001664EB /* InitViewController.swift in Sources */,
 				A58B9B7B2642FDA3001664EB /* TransferViewController.swift in Sources */,
 				A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */,

@@ -33,18 +33,15 @@ class InitViewController: UIViewController, InitViewProtocol {
     
     //MARK: - Methods
     private func setView() {
-        let rechability = Reachability.isConnectedToNetwork()
         let airBazView = WalletSDKInit.openWallet(delegate: self,
-                                                  rechability: rechability,
                                                   accountNumber: accountNumber,
                                                   name: name,
+                                                  username: "hGonzales",
                                                   apPat: apPat,
                                                   latitude: 19.3047057,
                                                   longitude: -99.2037942,
-                                                  userName: "hgonzalez",
-                                                  phone: 5510518955,
-                                                  radioColor: color.hex,
-                                                  selfColor: color.hex)
+                                                  radioColor: color.color,
+                                                  selfColor: color.color)
         
         addChild(airBazView)
         airBazView.view.frame = containerView.bounds
