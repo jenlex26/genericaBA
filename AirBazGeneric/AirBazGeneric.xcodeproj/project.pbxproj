@@ -44,6 +44,12 @@
 		A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8A9AA2640777D00FF58EC /* Colors.swift */; };
 		A5C40E17264C83C0000301DC /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
 		A5C40E18264C83C0000301DC /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5D9B6412656BD9D0047FC62 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63B2656BD9D0047FC62 /* HomePresenter.swift */; };
+		A5D9B6422656BD9D0047FC62 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63C2656BD9D0047FC62 /* HomeRouter.swift */; };
+		A5D9B6432656BD9D0047FC62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63D2656BD9D0047FC62 /* HomeViewController.swift */; };
+		A5D9B6442656BD9D0047FC62 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63E2656BD9D0047FC62 /* HomeProtocols.swift */; };
+		A5D9B6452656BD9D0047FC62 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63F2656BD9D0047FC62 /* HomeInteractor.swift */; };
+		A5D9B6462656BD9D0047FC62 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9B6402656BD9D0047FC62 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -101,6 +107,12 @@
 		A59EEB7B2639B321001477CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59EEBC42639BB66001477CD /* WalletSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WalletSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A8A9AA2640777D00FF58EC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A5D9B63B2656BD9D0047FC62 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A5D9B63C2656BD9D0047FC62 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		A5D9B63D2656BD9D0047FC62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A5D9B63E2656BD9D0047FC62 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		A5D9B63F2656BD9D0047FC62 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		A5D9B6402656BD9D0047FC62 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +246,7 @@
 		A59EEB842639B35C001477CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A5D9B63A2656BD940047FC62 /* Home */,
 				A58B9B7F264303EB001664EB /* Init */,
 				A553C1C52642F21A00EF35B0 /* SuccessfulTransfer */,
 				A553C1C42642F21300EF35B0 /* Transfer */,
@@ -248,6 +261,19 @@
 				A5A8A9AA2640777D00FF58EC /* Colors.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A5D9B63A2656BD940047FC62 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9B63B2656BD9D0047FC62 /* HomePresenter.swift */,
+				A5D9B63C2656BD9D0047FC62 /* HomeRouter.swift */,
+				A5D9B63D2656BD9D0047FC62 /* HomeViewController.swift */,
+				A5D9B63E2656BD9D0047FC62 /* HomeProtocols.swift */,
+				A5D9B63F2656BD9D0047FC62 /* HomeInteractor.swift */,
+				A5D9B6402656BD9D0047FC62 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B380EB6896CECCA14CBE815D /* Frameworks */ = {
@@ -324,6 +350,7 @@
 				A58B9B8B264304C3001664EB /* InitViewController.xib in Resources */,
 				A58B9B5A2642F2F7001664EB /* SuccsessfulTransferViewController.xib in Resources */,
 				A58B9B7E2642FDA3001664EB /* TransferViewController.xib in Resources */,
+				A5D9B6462656BD9D0047FC62 /* HomeViewController.xib in Resources */,
 				A59EEB772639B321001477CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +407,8 @@
 				A528E660263C6E9500B76EDF /* LoginViewController.swift in Sources */,
 				A58B9B722642FCD4001664EB /* SuccessfulTransferInteractor.swift in Sources */,
 				A58B9B87264304C3001664EB /* InitRouter.swift in Sources */,
+				A5D9B6412656BD9D0047FC62 /* HomePresenter.swift in Sources */,
+				A5D9B6442656BD9D0047FC62 /* HomeProtocols.swift in Sources */,
 				A528E66D263C78EE00B76EDF /* ViewAnimation.swift in Sources */,
 				A528E662263C6E9500B76EDF /* LoginInteractor.swift in Sources */,
 				A58B9B89264304C3001664EB /* InitProtocols.swift in Sources */,
@@ -388,6 +417,7 @@
 				A58B9B86264304C3001664EB /* InitPresenter.swift in Sources */,
 				A58B9B5D2642F2F7001664EB /* SuccsessfulTransferViewController.swift in Sources */,
 				A58B9B592642F2F7001664EB /* SuccsessfulTransferRouter.swift in Sources */,
+				A5D9B6422656BD9D0047FC62 /* HomeRouter.swift in Sources */,
 				A528E661263C6E9500B76EDF /* LoginProtocols.swift in Sources */,
 				A58B9B8A264304C3001664EB /* InitInteractor.swift in Sources */,
 				A58B9B7C2642FDA3001664EB /* TransferProtocols.swift in Sources */,
@@ -401,10 +431,12 @@
 				A58B9B9326430E4D001664EB /* UIColorExtension.swift in Sources */,
 				A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */,
 				A58B9B9126430E2D001664EB /* UIImageExtension.swift in Sources */,
+				A5D9B6432656BD9D0047FC62 /* HomeViewController.swift in Sources */,
 				A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */,
 				A528E65F263C6E9500B76EDF /* LoginRouter.swift in Sources */,
 				A58B9B5C2642F2F7001664EB /* SuccsessfulTransferProtocols.swift in Sources */,
 				A58B9B7A2642FDA3001664EB /* TransferRouter.swift in Sources */,
+				A5D9B6452656BD9D0047FC62 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +584,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric6;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -573,7 +606,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric6;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
