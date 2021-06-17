@@ -33,19 +33,19 @@ class InitViewController: UIViewController, InitViewProtocol {
     
     //MARK: - Methods
     private func setView() {
-        let airBazView = WalletSDKInit.openWallet(delegate: self,
-                                                  accountNumber: accountNumber,
-                                                  name: name,
-                                                  username: "hGonzales",
-                                                  apPat: apPat,
-                                                  latitude: 19.3047057,
-                                                  longitude: -99.2037942,
-                                                  radioColor: color.color,
-                                                  selfColor: color.color)
-        
-        addChild(airBazView)
-        airBazView.view.frame = containerView.bounds
-        containerView.addSubview(airBazView.view)
+//        let wallet = WalletSDKInit()
+//        let airBazView = wallet.renderRadar(delegate: self,
+//                                            accountNumber: accountNumber,
+//                                            name: name,
+//                                            apPat: apPat,
+//                                            latitude: 19.3047057,
+//                                            longitude: -99.2037942,
+//                                            radioColor: color.color,
+//                                            selfColor: color.color)
+//        
+//        addChild(airBazView)
+//        airBazView.view.frame = containerView.bounds
+//        containerView.addSubview(airBazView.view)
     }
     
     //MARK: - @IBActions
@@ -57,11 +57,11 @@ class InitViewController: UIViewController, InitViewProtocol {
 
 //MARK: - WalletSDKDelegate
 extension InitViewController: WalletSDKDelegate {
-    func encryptTexts(texts: [String]) -> [String] {
-        return texts.map {$0.replacingOccurrences(of: "%", with: "") }
+    func decryptText(text: String) -> String {
+        return text.replacingOccurrences(of: "$", with: "")
     }
     
-    func sucessAtFindingDevice(name: String, apPat: String, accountNumber: String) {
+    func sucessAtFindingDevice(name: String, apPat: String,phone: String, accountNumber: String) {
         let transferView = TransferRouter.createModule(accountName: name, accountApPat: apPat, accountToTransfer: accountNumber, myAccountNumber: self.accountNumber)
         self.navigationController?.pushViewController(transferView, animated: true)
     }

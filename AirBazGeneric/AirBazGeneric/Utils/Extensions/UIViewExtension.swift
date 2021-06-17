@@ -20,4 +20,11 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: 0.3, height: 0.5)
         self.layer.shadowRadius = 10.0
     }
+    
+    func roundCorners(corners: CACornerMask, cornerRadius: CGFloat) {
+        self.layer.cornerRadius = cornerRadius
+        if #available(iOS 11.0, *) {
+            self.layer.maskedCorners = corners
+        }
+    }
 }

@@ -21,8 +21,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-FU-mkP">
-                    <rect key="frame" x="20" y="60" width="280" height="498"/>
+                    <rect key="frame" x="20" y="60" width="280" height="450"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="zAO-ah-KJi"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhp-hO-33u">
                     <rect key="frame" x="10" y="10" width="30" height="40"/>
@@ -64,8 +67,6 @@
                 <constraint firstAttribute="trailing" secondItem="f4e-FU-mkP" secondAttribute="trailing" constant="20" id="VXQ-KQ-fS4"/>
                 <constraint firstItem="Jhp-hO-33u" firstAttribute="top" secondItem="239-x1-Ogi" secondAttribute="top" constant="10" id="cJO-yN-llL"/>
                 <constraint firstItem="f4e-FU-mkP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="fGX-8b-Kfj"/>
-                <constraint firstItem="239-x1-Ogi" firstAttribute="bottom" secondItem="f4e-FU-mkP" secondAttribute="bottom" constant="10" id="i4g-bo-j2h"/>
-                <constraint firstItem="f4e-FU-mkP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pTJ-UM-hzw"/>
             </constraints>
             <point key="canvasLocation" x="-170.625" y="76.056338028169009"/>
         </view>

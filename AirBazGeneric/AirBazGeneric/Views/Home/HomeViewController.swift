@@ -16,10 +16,43 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     //MARK: - @IBOutlets
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var depositView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    //MARK: - Properties
+    private var gradientLayer: CAGradientLayer?
 
     //MARK: - Life cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        setGradient()
+    }
+    
+    //MARK: - Methods
+    private func setGradient() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer?.frame = headerView.bounds
+        gradientLayer?.colors = [UIColor(red: 0.48, green: 0.81, blue: 0.40, alpha: 1.00).cgColor,
+                                 UIColor(red: 0.19, green: 0.69, blue: 0.54, alpha: 1.00).cgColor]
+        gradientLayer?.startPoint = CGPoint(x: 0, y: 1)
+        gradientLayer?.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer?.cornerRadius = 30.0
+        gradientLayer?.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        headerView.layer.addSublayer(gradientLayer!)
+    }
+    
+    private func setView() {
+        stackView.arrangedSubviews.forEach({ $0.setCorner(cornerRadius: 10.0) })
+        depositView.setCorner(cornerRadius: 10.0)
+        priceLabel.attributedText = "$325.00".priceStyle(fontSize: 25.0, weight: .heavy)
     }
 
 }

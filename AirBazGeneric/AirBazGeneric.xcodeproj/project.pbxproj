@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		004E9592651C4900E8B450C8 /* Pods_AirBazGeneric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CAD66D14DB58311D7EF6C2 /* Pods_AirBazGeneric.framework */; };
+		980F304A265AD958000FAEC6 /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F3048265AD958000FAEC6 /* ContactsCell.xib */; };
+		980F304B265AD958000FAEC6 /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F3049265AD958000FAEC6 /* ContactsCell.swift */; };
 		A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E658263C6E9500B76EDF /* LoginPresenter.swift */; };
 		A528E65F263C6E9500B76EDF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E659263C6E9500B76EDF /* LoginRouter.swift */; };
 		A528E660263C6E9500B76EDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E65A263C6E9500B76EDF /* LoginViewController.swift */; };
@@ -17,6 +19,24 @@
 		A528E668263C704500B76EDF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E667263C704500B76EDF /* TextField.swift */; };
 		A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E66A263C708900B76EDF /* UIViewExtension.swift */; };
 		A528E66D263C78EE00B76EDF /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E66C263C78EE00B76EDF /* ViewAnimation.swift */; };
+		A52BE413265801090053CC36 /* BAZHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE40D265801090053CC36 /* BAZHomePresenter.swift */; };
+		A52BE414265801090053CC36 /* BAZHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE40E265801090053CC36 /* BAZHomeRouter.swift */; };
+		A52BE415265801090053CC36 /* BAZHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE40F265801090053CC36 /* BAZHomeViewController.swift */; };
+		A52BE416265801090053CC36 /* BAZHomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE410265801090053CC36 /* BAZHomeProtocols.swift */; };
+		A52BE417265801090053CC36 /* BAZHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE411265801090053CC36 /* BAZHomeInteractor.swift */; };
+		A52BE418265801090053CC36 /* BAZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52BE412265801090053CC36 /* BAZHomeViewController.xib */; };
+		A52BE4202658126E0053CC36 /* BAZAirBazPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE41A2658126E0053CC36 /* BAZAirBazPresenter.swift */; };
+		A52BE4212658126E0053CC36 /* BAZAirBazRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE41B2658126E0053CC36 /* BAZAirBazRouter.swift */; };
+		A52BE4222658126E0053CC36 /* BAZAirBazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE41C2658126E0053CC36 /* BAZAirBazViewController.swift */; };
+		A52BE4232658126E0053CC36 /* BAZAirBazProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE41D2658126E0053CC36 /* BAZAirBazProtocols.swift */; };
+		A52BE4242658126E0053CC36 /* BAZAirBazInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE41E2658126E0053CC36 /* BAZAirBazInteractor.swift */; };
+		A52BE4252658126E0053CC36 /* BAZAirBazViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52BE41F2658126E0053CC36 /* BAZAirBazViewController.xib */; };
+		A52BE42D26581A230053CC36 /* BAZPaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE42726581A230053CC36 /* BAZPaymentPresenter.swift */; };
+		A52BE42E26581A230053CC36 /* BAZPaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE42826581A230053CC36 /* BAZPaymentRouter.swift */; };
+		A52BE42F26581A230053CC36 /* BAZPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE42926581A230053CC36 /* BAZPaymentViewController.swift */; };
+		A52BE43026581A230053CC36 /* BAZPaymentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE42A26581A230053CC36 /* BAZPaymentProtocols.swift */; };
+		A52BE43126581A230053CC36 /* BAZPaymentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BE42B26581A230053CC36 /* BAZPaymentInteractor.swift */; };
+		A52BE43226581A230053CC36 /* BAZPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52BE42C26581A230053CC36 /* BAZPaymentViewController.xib */; };
 		A58B9B592642F2F7001664EB /* SuccsessfulTransferRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */; };
 		A58B9B5A2642F2F7001664EB /* SuccsessfulTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */; };
 		A58B9B5B2642F2F7001664EB /* SuccsessfulTransferPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */; };
@@ -44,15 +64,61 @@
 		A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8A9AA2640777D00FF58EC /* Colors.swift */; };
 		A5C40E17264C83C0000301DC /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
 		A5C40E18264C83C0000301DC /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5CF4CC0265CB01300B17FDF /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF4CBF265CB01300B17FDF /* Rechability.swift */; };
 		A5D9B6412656BD9D0047FC62 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63B2656BD9D0047FC62 /* HomePresenter.swift */; };
 		A5D9B6422656BD9D0047FC62 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63C2656BD9D0047FC62 /* HomeRouter.swift */; };
 		A5D9B6432656BD9D0047FC62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63D2656BD9D0047FC62 /* HomeViewController.swift */; };
 		A5D9B6442656BD9D0047FC62 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63E2656BD9D0047FC62 /* HomeProtocols.swift */; };
 		A5D9B6452656BD9D0047FC62 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63F2656BD9D0047FC62 /* HomeInteractor.swift */; };
 		A5D9B6462656BD9D0047FC62 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9B6402656BD9D0047FC62 /* HomeViewController.xib */; };
+		A5D9B6662656E77F0047FC62 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6652656E77F0047FC62 /* StringExtension.swift */; };
+		A5D9B66F2656EE9B0047FC62 /* ChooseAmountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6692656EE9B0047FC62 /* ChooseAmountPresenter.swift */; };
+		A5D9B6702656EE9B0047FC62 /* ChooseAmountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B66A2656EE9B0047FC62 /* ChooseAmountRouter.swift */; };
+		A5D9B6712656EE9B0047FC62 /* ChooseAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B66B2656EE9B0047FC62 /* ChooseAmountViewController.swift */; };
+		A5D9B6722656EE9B0047FC62 /* ChooseAmountProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B66C2656EE9B0047FC62 /* ChooseAmountProtocols.swift */; };
+		A5D9B6732656EE9B0047FC62 /* ChooseAmountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B66D2656EE9B0047FC62 /* ChooseAmountInteractor.swift */; };
+		A5D9B6742656EE9B0047FC62 /* ChooseAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9B66E2656EE9B0047FC62 /* ChooseAmountViewController.xib */; };
+		A5D9B67C2656F22E0047FC62 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6762656F22E0047FC62 /* MenuPresenter.swift */; };
+		A5D9B67D2656F22E0047FC62 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6772656F22E0047FC62 /* MenuRouter.swift */; };
+		A5D9B67E2656F22E0047FC62 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6782656F22E0047FC62 /* MenuViewController.swift */; };
+		A5D9B67F2656F22E0047FC62 /* MenuProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6792656F22E0047FC62 /* MenuProtocols.swift */; };
+		A5D9B6802656F22E0047FC62 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B67A2656F22E0047FC62 /* MenuInteractor.swift */; };
+		A5D9B6812656F22E0047FC62 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D9B67B2656F22E0047FC62 /* MenuViewController.xib */; };
+		A5D9B6842656F4E50047FC62 /* CustomTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6832656F4E50047FC62 /* CustomTabController.swift */; };
+		A5D9B6862656F51C0047FC62 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B6852656F51C0047FC62 /* CustomTabBar.swift */; };
+		A5E5F131265873F60012EB55 /* WhereDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F12C265873F60012EB55 /* WhereDoViewController.swift */; };
+		A5E5F132265873F60012EB55 /* WhereDoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F12D265873F60012EB55 /* WhereDoRouter.swift */; };
+		A5E5F133265873F60012EB55 /* WhereDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F12E265873F60012EB55 /* WhereDoPresenter.swift */; };
+		A5E5F134265873F60012EB55 /* WhereDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F12F265873F60012EB55 /* WhereDoViewController.xib */; };
+		A5E5F135265873F60012EB55 /* WhereDoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F130265873F60012EB55 /* WhereDoInteractor.swift */; };
+		A5E5F13B265877E40012EB55 /* WhereDoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F13A265877E40012EB55 /* WhereDoProtocols.swift */; };
+		A5E5F14326587BCB0012EB55 /* FinalDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F13D26587BCB0012EB55 /* FinalDetailPresenter.swift */; };
+		A5E5F14426587BCB0012EB55 /* FinalDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F13E26587BCB0012EB55 /* FinalDetailInteractor.swift */; };
+		A5E5F14526587BCB0012EB55 /* FinalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F13F26587BCB0012EB55 /* FinalDetailViewController.swift */; };
+		A5E5F14626587BCB0012EB55 /* FinalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F14026587BCB0012EB55 /* FinalDetailViewController.xib */; };
+		A5E5F14726587BCB0012EB55 /* FinalDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14126587BCB0012EB55 /* FinalDetailRouter.swift */; };
+		A5E5F14826587BCB0012EB55 /* FinalDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14226587BCB0012EB55 /* FinalDetailProtocols.swift */; };
+		A5E5F15026587E670012EB55 /* ResumeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14A26587E670012EB55 /* ResumeRouter.swift */; };
+		A5E5F15126587E670012EB55 /* ResumePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14B26587E670012EB55 /* ResumePresenter.swift */; };
+		A5E5F15226587E670012EB55 /* ResumeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14C26587E670012EB55 /* ResumeInteractor.swift */; };
+		A5E5F15326587E670012EB55 /* ResumeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14D26587E670012EB55 /* ResumeProtocols.swift */; };
+		A5E5F15526587E670012EB55 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F14F26587E670012EB55 /* ResumeViewController.swift */; };
+		A5E5F1612658D6610012EB55 /* AccountsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F15F2658D6610012EB55 /* AccountsCell.swift */; };
+		A5E5F1622658D6610012EB55 /* AccountsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F1602658D6610012EB55 /* AccountsCell.xib */; };
+		A5E5F164265985E50012EB55 /* ResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F163265985E50012EB55 /* ResumeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		859D5084266DB969004804D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C40E19264C83C0000301DC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,7 +135,10 @@
 /* Begin PBXFileReference section */
 		61C34709210CC08C31DB9502 /* Pods-AirBazGeneric.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.release.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.release.xcconfig"; sourceTree = "<group>"; };
 		816CEEF0076C8D36D8236CF9 /* Pods-AirBazGeneric.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.debug.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.debug.xcconfig"; sourceTree = "<group>"; };
+		859D5078266DB969004804D0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		92CAD66D14DB58311D7EF6C2 /* Pods_AirBazGeneric.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBazGeneric.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980F3048265AD958000FAEC6 /* ContactsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
+		980F3049265AD958000FAEC6 /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		A528E658263C6E9500B76EDF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		A528E659263C6E9500B76EDF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		A528E65A263C6E9500B76EDF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +148,24 @@
 		A528E667263C704500B76EDF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A528E66A263C708900B76EDF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A528E66C263C78EE00B76EDF /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
+		A52BE40D265801090053CC36 /* BAZHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZHomePresenter.swift; sourceTree = "<group>"; };
+		A52BE40E265801090053CC36 /* BAZHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZHomeRouter.swift; sourceTree = "<group>"; };
+		A52BE40F265801090053CC36 /* BAZHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZHomeViewController.swift; sourceTree = "<group>"; };
+		A52BE410265801090053CC36 /* BAZHomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZHomeProtocols.swift; sourceTree = "<group>"; };
+		A52BE411265801090053CC36 /* BAZHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZHomeInteractor.swift; sourceTree = "<group>"; };
+		A52BE412265801090053CC36 /* BAZHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAZHomeViewController.xib; sourceTree = "<group>"; };
+		A52BE41A2658126E0053CC36 /* BAZAirBazPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZAirBazPresenter.swift; sourceTree = "<group>"; };
+		A52BE41B2658126E0053CC36 /* BAZAirBazRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZAirBazRouter.swift; sourceTree = "<group>"; };
+		A52BE41C2658126E0053CC36 /* BAZAirBazViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZAirBazViewController.swift; sourceTree = "<group>"; };
+		A52BE41D2658126E0053CC36 /* BAZAirBazProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZAirBazProtocols.swift; sourceTree = "<group>"; };
+		A52BE41E2658126E0053CC36 /* BAZAirBazInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZAirBazInteractor.swift; sourceTree = "<group>"; };
+		A52BE41F2658126E0053CC36 /* BAZAirBazViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAZAirBazViewController.xib; sourceTree = "<group>"; };
+		A52BE42726581A230053CC36 /* BAZPaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentPresenter.swift; sourceTree = "<group>"; };
+		A52BE42826581A230053CC36 /* BAZPaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentRouter.swift; sourceTree = "<group>"; };
+		A52BE42926581A230053CC36 /* BAZPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentViewController.swift; sourceTree = "<group>"; };
+		A52BE42A26581A230053CC36 /* BAZPaymentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentProtocols.swift; sourceTree = "<group>"; };
+		A52BE42B26581A230053CC36 /* BAZPaymentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentInteractor.swift; sourceTree = "<group>"; };
+		A52BE42C26581A230053CC36 /* BAZPaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAZPaymentViewController.xib; sourceTree = "<group>"; };
 		A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferRouter.swift; sourceTree = "<group>"; };
 		A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccsessfulTransferViewController.xib; sourceTree = "<group>"; };
 		A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferPresenter.swift; sourceTree = "<group>"; };
@@ -107,12 +194,48 @@
 		A59EEB7B2639B321001477CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59EEBC42639BB66001477CD /* WalletSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WalletSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A8A9AA2640777D00FF58EC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A5CF4CBF265CB01300B17FDF /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		A5D9B63B2656BD9D0047FC62 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		A5D9B63C2656BD9D0047FC62 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		A5D9B63D2656BD9D0047FC62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5D9B63E2656BD9D0047FC62 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		A5D9B63F2656BD9D0047FC62 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		A5D9B6402656BD9D0047FC62 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A5D9B6652656E77F0047FC62 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A5D9B6692656EE9B0047FC62 /* ChooseAmountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAmountPresenter.swift; sourceTree = "<group>"; };
+		A5D9B66A2656EE9B0047FC62 /* ChooseAmountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAmountRouter.swift; sourceTree = "<group>"; };
+		A5D9B66B2656EE9B0047FC62 /* ChooseAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAmountViewController.swift; sourceTree = "<group>"; };
+		A5D9B66C2656EE9B0047FC62 /* ChooseAmountProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAmountProtocols.swift; sourceTree = "<group>"; };
+		A5D9B66D2656EE9B0047FC62 /* ChooseAmountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAmountInteractor.swift; sourceTree = "<group>"; };
+		A5D9B66E2656EE9B0047FC62 /* ChooseAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseAmountViewController.xib; sourceTree = "<group>"; };
+		A5D9B6762656F22E0047FC62 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		A5D9B6772656F22E0047FC62 /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		A5D9B6782656F22E0047FC62 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A5D9B6792656F22E0047FC62 /* MenuProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProtocols.swift; sourceTree = "<group>"; };
+		A5D9B67A2656F22E0047FC62 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		A5D9B67B2656F22E0047FC62 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		A5D9B6832656F4E50047FC62 /* CustomTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabController.swift; sourceTree = "<group>"; };
+		A5D9B6852656F51C0047FC62 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		A5E5F12C265873F60012EB55 /* WhereDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereDoViewController.swift; sourceTree = "<group>"; };
+		A5E5F12D265873F60012EB55 /* WhereDoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereDoRouter.swift; sourceTree = "<group>"; };
+		A5E5F12E265873F60012EB55 /* WhereDoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereDoPresenter.swift; sourceTree = "<group>"; };
+		A5E5F12F265873F60012EB55 /* WhereDoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereDoViewController.xib; sourceTree = "<group>"; };
+		A5E5F130265873F60012EB55 /* WhereDoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereDoInteractor.swift; sourceTree = "<group>"; };
+		A5E5F13A265877E40012EB55 /* WhereDoProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereDoProtocols.swift; sourceTree = "<group>"; };
+		A5E5F13D26587BCB0012EB55 /* FinalDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalDetailPresenter.swift; sourceTree = "<group>"; };
+		A5E5F13E26587BCB0012EB55 /* FinalDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalDetailInteractor.swift; sourceTree = "<group>"; };
+		A5E5F13F26587BCB0012EB55 /* FinalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalDetailViewController.swift; sourceTree = "<group>"; };
+		A5E5F14026587BCB0012EB55 /* FinalDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalDetailViewController.xib; sourceTree = "<group>"; };
+		A5E5F14126587BCB0012EB55 /* FinalDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalDetailRouter.swift; sourceTree = "<group>"; };
+		A5E5F14226587BCB0012EB55 /* FinalDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalDetailProtocols.swift; sourceTree = "<group>"; };
+		A5E5F14A26587E670012EB55 /* ResumeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeRouter.swift; sourceTree = "<group>"; };
+		A5E5F14B26587E670012EB55 /* ResumePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumePresenter.swift; sourceTree = "<group>"; };
+		A5E5F14C26587E670012EB55 /* ResumeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeInteractor.swift; sourceTree = "<group>"; };
+		A5E5F14D26587E670012EB55 /* ResumeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeProtocols.swift; sourceTree = "<group>"; };
+		A5E5F14F26587E670012EB55 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		A5E5F15F2658D6610012EB55 /* AccountsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCell.swift; sourceTree = "<group>"; };
+		A5E5F1602658D6610012EB55 /* AccountsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsCell.xib; sourceTree = "<group>"; };
+		A5E5F163265985E50012EB55 /* ResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +281,7 @@
 				A528E667263C704500B76EDF /* TextField.swift */,
 				A528E66C263C78EE00B76EDF /* ViewAnimation.swift */,
 				A58B9B8E26430DDD001664EB /* CircleNameImage.swift */,
+				A5CF4CBF265CB01300B17FDF /* Rechability.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -168,8 +292,48 @@
 				A528E66A263C708900B76EDF /* UIViewExtension.swift */,
 				A58B9B9026430E2D001664EB /* UIImageExtension.swift */,
 				A58B9B9226430E4D001664EB /* UIColorExtension.swift */,
+				A5D9B6652656E77F0047FC62 /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A52BE40C265800F90053CC36 /* BAZHome */ = {
+			isa = PBXGroup;
+			children = (
+				A52BE40D265801090053CC36 /* BAZHomePresenter.swift */,
+				A52BE40E265801090053CC36 /* BAZHomeRouter.swift */,
+				A52BE40F265801090053CC36 /* BAZHomeViewController.swift */,
+				A52BE410265801090053CC36 /* BAZHomeProtocols.swift */,
+				A52BE411265801090053CC36 /* BAZHomeInteractor.swift */,
+				A52BE412265801090053CC36 /* BAZHomeViewController.xib */,
+			);
+			path = BAZHome;
+			sourceTree = "<group>";
+		};
+		A52BE419265812610053CC36 /* BAZAirBaz */ = {
+			isa = PBXGroup;
+			children = (
+				A52BE41A2658126E0053CC36 /* BAZAirBazPresenter.swift */,
+				A52BE41B2658126E0053CC36 /* BAZAirBazRouter.swift */,
+				A52BE41C2658126E0053CC36 /* BAZAirBazViewController.swift */,
+				A52BE41D2658126E0053CC36 /* BAZAirBazProtocols.swift */,
+				A52BE41E2658126E0053CC36 /* BAZAirBazInteractor.swift */,
+				A52BE41F2658126E0053CC36 /* BAZAirBazViewController.xib */,
+			);
+			path = BAZAirBaz;
+			sourceTree = "<group>";
+		};
+		A52BE42626581A010053CC36 /* BAZPayment */ = {
+			isa = PBXGroup;
+			children = (
+				A52BE42726581A230053CC36 /* BAZPaymentPresenter.swift */,
+				A52BE42826581A230053CC36 /* BAZPaymentRouter.swift */,
+				A52BE42926581A230053CC36 /* BAZPaymentViewController.swift */,
+				A52BE42A26581A230053CC36 /* BAZPaymentProtocols.swift */,
+				A52BE42B26581A230053CC36 /* BAZPaymentInteractor.swift */,
+				A52BE42C26581A230053CC36 /* BAZPaymentViewController.xib */,
+			);
+			path = BAZPayment;
 			sourceTree = "<group>";
 		};
 		A553C1C42642F21300EF35B0 /* Transfer */ = {
@@ -196,6 +360,29 @@
 				A58B9B712642FCD4001664EB /* SuccessfulTransferInteractor.swift */,
 			);
 			path = SuccessfulTransfer;
+			sourceTree = "<group>";
+		};
+		A56892AE26586BC700478E87 /* BAZWhereDo */ = {
+			isa = PBXGroup;
+			children = (
+				A5E5F13A265877E40012EB55 /* WhereDoProtocols.swift */,
+				A5E5F130265873F60012EB55 /* WhereDoInteractor.swift */,
+				A5E5F12E265873F60012EB55 /* WhereDoPresenter.swift */,
+				A5E5F12D265873F60012EB55 /* WhereDoRouter.swift */,
+				A5E5F12C265873F60012EB55 /* WhereDoViewController.swift */,
+				A5E5F12F265873F60012EB55 /* WhereDoViewController.xib */,
+				A56892BB26586BEB00478E87 /* Cells */,
+			);
+			path = BAZWhereDo;
+			sourceTree = "<group>";
+		};
+		A56892BB26586BEB00478E87 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A5E5F15A2658D5770012EB55 /* ContactsCell */,
+				A5E5F1572658D5510012EB55 /* AccountsCell */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A58B9B7F264303EB001664EB /* Init */ = {
@@ -246,6 +433,15 @@
 		A59EEB842639B35C001477CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A5E5F14926587E340012EB55 /* BAZResume */,
+				A5E5F13C26587BB40012EB55 /* BAZFinalDetail */,
+				A56892AE26586BC700478E87 /* BAZWhereDo */,
+				A52BE42626581A010053CC36 /* BAZPayment */,
+				A52BE419265812610053CC36 /* BAZAirBaz */,
+				A52BE40C265800F90053CC36 /* BAZHome */,
+				A5D9B6822656F4D50047FC62 /* CustomTabController */,
+				A5D9B6752656F21E0047FC62 /* Menu */,
+				A5D9B6682656ED010047FC62 /* ChooseAmount */,
 				A5D9B63A2656BD940047FC62 /* Home */,
 				A58B9B7F264303EB001664EB /* Init */,
 				A553C1C52642F21A00EF35B0 /* SuccessfulTransfer */,
@@ -276,11 +472,91 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		A5D9B6682656ED010047FC62 /* ChooseAmount */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9B6692656EE9B0047FC62 /* ChooseAmountPresenter.swift */,
+				A5D9B66A2656EE9B0047FC62 /* ChooseAmountRouter.swift */,
+				A5D9B66B2656EE9B0047FC62 /* ChooseAmountViewController.swift */,
+				A5D9B66C2656EE9B0047FC62 /* ChooseAmountProtocols.swift */,
+				A5D9B66D2656EE9B0047FC62 /* ChooseAmountInteractor.swift */,
+				A5D9B66E2656EE9B0047FC62 /* ChooseAmountViewController.xib */,
+			);
+			path = ChooseAmount;
+			sourceTree = "<group>";
+		};
+		A5D9B6752656F21E0047FC62 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9B6762656F22E0047FC62 /* MenuPresenter.swift */,
+				A5D9B6772656F22E0047FC62 /* MenuRouter.swift */,
+				A5D9B6782656F22E0047FC62 /* MenuViewController.swift */,
+				A5D9B6792656F22E0047FC62 /* MenuProtocols.swift */,
+				A5D9B67A2656F22E0047FC62 /* MenuInteractor.swift */,
+				A5D9B67B2656F22E0047FC62 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		A5D9B6822656F4D50047FC62 /* CustomTabController */ = {
+			isa = PBXGroup;
+			children = (
+				A5D9B6832656F4E50047FC62 /* CustomTabController.swift */,
+				A5D9B6852656F51C0047FC62 /* CustomTabBar.swift */,
+			);
+			path = CustomTabController;
+			sourceTree = "<group>";
+		};
+		A5E5F13C26587BB40012EB55 /* BAZFinalDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A5E5F13E26587BCB0012EB55 /* FinalDetailInteractor.swift */,
+				A5E5F13D26587BCB0012EB55 /* FinalDetailPresenter.swift */,
+				A5E5F14226587BCB0012EB55 /* FinalDetailProtocols.swift */,
+				A5E5F14126587BCB0012EB55 /* FinalDetailRouter.swift */,
+				A5E5F13F26587BCB0012EB55 /* FinalDetailViewController.swift */,
+				A5E5F14026587BCB0012EB55 /* FinalDetailViewController.xib */,
+			);
+			path = BAZFinalDetail;
+			sourceTree = "<group>";
+		};
+		A5E5F14926587E340012EB55 /* BAZResume */ = {
+			isa = PBXGroup;
+			children = (
+				A5E5F163265985E50012EB55 /* ResumeViewController.xib */,
+				A5E5F14C26587E670012EB55 /* ResumeInteractor.swift */,
+				A5E5F14B26587E670012EB55 /* ResumePresenter.swift */,
+				A5E5F14D26587E670012EB55 /* ResumeProtocols.swift */,
+				A5E5F14A26587E670012EB55 /* ResumeRouter.swift */,
+				A5E5F14F26587E670012EB55 /* ResumeViewController.swift */,
+			);
+			path = BAZResume;
+			sourceTree = "<group>";
+		};
+		A5E5F1572658D5510012EB55 /* AccountsCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5E5F15F2658D6610012EB55 /* AccountsCell.swift */,
+				A5E5F1602658D6610012EB55 /* AccountsCell.xib */,
+			);
+			path = AccountsCell;
+			sourceTree = "<group>";
+		};
+		A5E5F15A2658D5770012EB55 /* ContactsCell */ = {
+			isa = PBXGroup;
+			children = (
+				980F3049265AD958000FAEC6 /* ContactsCell.swift */,
+				980F3048265AD958000FAEC6 /* ContactsCell.xib */,
+			);
+			path = ContactsCell;
+			sourceTree = "<group>";
+		};
 		B380EB6896CECCA14CBE815D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A59EEBC42639BB66001477CD /* WalletSDK.framework */,
 				92CAD66D14DB58311D7EF6C2 /* Pods_AirBazGeneric.framework */,
+				859D5078266DB969004804D0 /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,6 +574,7 @@
 				A59EEB682639B320001477CD /* Resources */,
 				1926C39775CE7F873D35AD1B /* [CP] Embed Pods Frameworks */,
 				A5C40E19264C83C0000301DC /* Embed Frameworks */,
+				859D5084266DB969004804D0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -314,7 +591,7 @@
 		A59EEB622639B320001477CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					A59EEB692639B320001477CD = {
@@ -348,6 +625,16 @@
 				A528E663263C6E9500B76EDF /* LoginViewController.xib in Resources */,
 				A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */,
 				A58B9B8B264304C3001664EB /* InitViewController.xib in Resources */,
+				A52BE4252658126E0053CC36 /* BAZAirBazViewController.xib in Resources */,
+				A5E5F14626587BCB0012EB55 /* FinalDetailViewController.xib in Resources */,
+				A52BE418265801090053CC36 /* BAZHomeViewController.xib in Resources */,
+				A5D9B6742656EE9B0047FC62 /* ChooseAmountViewController.xib in Resources */,
+				A5D9B6812656F22E0047FC62 /* MenuViewController.xib in Resources */,
+				A5E5F1622658D6610012EB55 /* AccountsCell.xib in Resources */,
+				A5E5F164265985E50012EB55 /* ResumeViewController.xib in Resources */,
+				A52BE43226581A230053CC36 /* BAZPaymentViewController.xib in Resources */,
+				980F304A265AD958000FAEC6 /* ContactsCell.xib in Resources */,
+				A5E5F134265873F60012EB55 /* WhereDoViewController.xib in Resources */,
 				A58B9B5A2642F2F7001664EB /* SuccsessfulTransferViewController.xib in Resources */,
 				A58B9B7E2642FDA3001664EB /* TransferViewController.xib in Resources */,
 				A5D9B6462656BD9D0047FC62 /* HomeViewController.xib in Resources */,
@@ -404,37 +691,83 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E5F15226587E670012EB55 /* ResumeInteractor.swift in Sources */,
 				A528E660263C6E9500B76EDF /* LoginViewController.swift in Sources */,
+				980F304B265AD958000FAEC6 /* ContactsCell.swift in Sources */,
 				A58B9B722642FCD4001664EB /* SuccessfulTransferInteractor.swift in Sources */,
+				A5D9B67D2656F22E0047FC62 /* MenuRouter.swift in Sources */,
+				A5E5F15126587E670012EB55 /* ResumePresenter.swift in Sources */,
 				A58B9B87264304C3001664EB /* InitRouter.swift in Sources */,
+				A5E5F15326587E670012EB55 /* ResumeProtocols.swift in Sources */,
+				A5D9B67C2656F22E0047FC62 /* MenuPresenter.swift in Sources */,
 				A5D9B6412656BD9D0047FC62 /* HomePresenter.swift in Sources */,
+				A52BE43126581A230053CC36 /* BAZPaymentInteractor.swift in Sources */,
+				A5D9B6732656EE9B0047FC62 /* ChooseAmountInteractor.swift in Sources */,
+				A5D9B6722656EE9B0047FC62 /* ChooseAmountProtocols.swift in Sources */,
 				A5D9B6442656BD9D0047FC62 /* HomeProtocols.swift in Sources */,
 				A528E66D263C78EE00B76EDF /* ViewAnimation.swift in Sources */,
+				A5E5F14426587BCB0012EB55 /* FinalDetailInteractor.swift in Sources */,
+				A5E5F15526587E670012EB55 /* ResumeViewController.swift in Sources */,
 				A528E662263C6E9500B76EDF /* LoginInteractor.swift in Sources */,
 				A58B9B89264304C3001664EB /* InitProtocols.swift in Sources */,
+				A5D9B6662656E77F0047FC62 /* StringExtension.swift in Sources */,
+				A5E5F14826587BCB0012EB55 /* FinalDetailProtocols.swift in Sources */,
+				A52BE4242658126E0053CC36 /* BAZAirBazInteractor.swift in Sources */,
 				A58B9B7D2642FDA3001664EB /* TransferInteractor.swift in Sources */,
 				A58B9B792642FDA3001664EB /* TransferPresenter.swift in Sources */,
 				A58B9B86264304C3001664EB /* InitPresenter.swift in Sources */,
+				A5E5F135265873F60012EB55 /* WhereDoInteractor.swift in Sources */,
+				A52BE417265801090053CC36 /* BAZHomeInteractor.swift in Sources */,
+				A5D9B67F2656F22E0047FC62 /* MenuProtocols.swift in Sources */,
 				A58B9B5D2642F2F7001664EB /* SuccsessfulTransferViewController.swift in Sources */,
+				A52BE4212658126E0053CC36 /* BAZAirBazRouter.swift in Sources */,
+				A5D9B6712656EE9B0047FC62 /* ChooseAmountViewController.swift in Sources */,
+				A5E5F133265873F60012EB55 /* WhereDoPresenter.swift in Sources */,
 				A58B9B592642F2F7001664EB /* SuccsessfulTransferRouter.swift in Sources */,
 				A5D9B6422656BD9D0047FC62 /* HomeRouter.swift in Sources */,
+				A52BE43026581A230053CC36 /* BAZPaymentProtocols.swift in Sources */,
+				A52BE4232658126E0053CC36 /* BAZAirBazProtocols.swift in Sources */,
+				A52BE414265801090053CC36 /* BAZHomeRouter.swift in Sources */,
 				A528E661263C6E9500B76EDF /* LoginProtocols.swift in Sources */,
+				A5E5F14726587BCB0012EB55 /* FinalDetailRouter.swift in Sources */,
 				A58B9B8A264304C3001664EB /* InitInteractor.swift in Sources */,
 				A58B9B7C2642FDA3001664EB /* TransferProtocols.swift in Sources */,
 				A528E668263C704500B76EDF /* TextField.swift in Sources */,
+				A5E5F15026587E670012EB55 /* ResumeRouter.swift in Sources */,
 				A58B9B8F26430DDD001664EB /* CircleNameImage.swift in Sources */,
 				A58B9B88264304C3001664EB /* InitViewController.swift in Sources */,
 				A58B9B7B2642FDA3001664EB /* TransferViewController.swift in Sources */,
+				A5D9B6862656F51C0047FC62 /* CustomTabBar.swift in Sources */,
 				A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */,
 				A58B9B5B2642F2F7001664EB /* SuccsessfulTransferPresenter.swift in Sources */,
+				A5CF4CC0265CB01300B17FDF /* Rechability.swift in Sources */,
+				A52BE4202658126E0053CC36 /* BAZAirBazPresenter.swift in Sources */,
+				A5E5F14326587BCB0012EB55 /* FinalDetailPresenter.swift in Sources */,
+				A52BE42E26581A230053CC36 /* BAZPaymentRouter.swift in Sources */,
+				A5E5F13B265877E40012EB55 /* WhereDoProtocols.swift in Sources */,
 				A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */,
+				A5D9B6802656F22E0047FC62 /* MenuInteractor.swift in Sources */,
+				A5D9B6842656F4E50047FC62 /* CustomTabController.swift in Sources */,
 				A58B9B9326430E4D001664EB /* UIColorExtension.swift in Sources */,
+				A52BE42F26581A230053CC36 /* BAZPaymentViewController.swift in Sources */,
+				A5D9B67E2656F22E0047FC62 /* MenuViewController.swift in Sources */,
+				A5E5F132265873F60012EB55 /* WhereDoRouter.swift in Sources */,
 				A59EEB6E2639B320001477CD /* AppDelegate.swift in Sources */,
+				A52BE416265801090053CC36 /* BAZHomeProtocols.swift in Sources */,
 				A58B9B9126430E2D001664EB /* UIImageExtension.swift in Sources */,
+				A5E5F14526587BCB0012EB55 /* FinalDetailViewController.swift in Sources */,
+				A52BE415265801090053CC36 /* BAZHomeViewController.swift in Sources */,
 				A5D9B6432656BD9D0047FC62 /* HomeViewController.swift in Sources */,
+				A5E5F131265873F60012EB55 /* WhereDoViewController.swift in Sources */,
+				A5E5F1612658D6610012EB55 /* AccountsCell.swift in Sources */,
+				A52BE4222658126E0053CC36 /* BAZAirBazViewController.swift in Sources */,
+				A52BE413265801090053CC36 /* BAZHomePresenter.swift in Sources */,
+				A5D9B6702656EE9B0047FC62 /* ChooseAmountRouter.swift in Sources */,
+				A5D9B66F2656EE9B0047FC62 /* ChooseAmountPresenter.swift in Sources */,
 				A528E66B263C708900B76EDF /* UIViewExtension.swift in Sources */,
 				A528E65F263C6E9500B76EDF /* LoginRouter.swift in Sources */,
 				A58B9B5C2642F2F7001664EB /* SuccsessfulTransferProtocols.swift in Sources */,
+				A52BE42D26581A230053CC36 /* BAZPaymentPresenter.swift in Sources */,
 				A58B9B7A2642FDA3001664EB /* TransferRouter.swift in Sources */,
 				A5D9B6452656BD9D0047FC62 /* HomeInteractor.swift in Sources */,
 			);
@@ -577,7 +910,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AK6T2859PL;
+				DEVELOPMENT_TEAM = 2W3T4DUMDZ;
 				INFOPLIST_FILE = AirBazGeneric/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -585,7 +918,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric20;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -599,7 +932,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S33SYN3N85;
+				DEVELOPMENT_TEAM = AK6T2859PL;
 				INFOPLIST_FILE = AirBazGeneric/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,7 +940,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baz.airbazgeneric10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
