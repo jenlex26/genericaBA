@@ -11,22 +11,23 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol MenuWireframeProtocol: class {
+protocol MenuWireframeProtocol: AnyObject {
 
 }
+
 //MARK: Presenter -
-protocol MenuPresenterProtocol: class {
+protocol MenuPresenterProtocol: AnyObject {
 
 }
 
 //MARK: Interactor -
-protocol MenuInteractorProtocol: class {
+protocol MenuInteractorProtocol: AnyObject {
 
   var presenter: MenuPresenterProtocol?  { get set }
 }
 
 //MARK: View -
-protocol MenuViewProtocol: class {
+protocol MenuViewProtocol: AnyObject {
 
   var presenter: MenuPresenterProtocol?  { get set }
 }

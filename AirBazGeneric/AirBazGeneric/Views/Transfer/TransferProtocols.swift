@@ -11,12 +11,12 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol TransferWireframeProtocol: class {
+protocol TransferWireframeProtocol: AnyObject {
 
 }
 
 //MARK: Presenter -
-protocol TransferPresenterProtocol: class {
+protocol TransferPresenterProtocol: AnyObject {
 
     func makeTransfer(amount: String, accountToTransfer: String, myAccountNumber: String)
     func checkTextField(amount: String?)
@@ -27,7 +27,7 @@ protocol TransferPresenterProtocol: class {
 }
 
 //MARK: Interactor -
-protocol TransferInteractorProtocol: class {
+protocol TransferInteractorProtocol: AnyObject {
     
     var presenter: TransferPresenterProtocol?  { get set }
     
@@ -36,7 +36,7 @@ protocol TransferInteractorProtocol: class {
 }
 
 //MARK: View -
-protocol TransferViewProtocol: class {
+protocol TransferViewProtocol: AnyObject {
     
     var presenter: TransferPresenterProtocol?  { get set }
     

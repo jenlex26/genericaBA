@@ -18,15 +18,20 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
     //MARK: - @IBOutlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var stepViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var descriptionLbl: UILabel!
     
     //MARK: - Properties
     var walletInit: WalletSDKInit = WalletSDKInit.shared
+    var airBazView: AirBazViewController?
     
     //MARK: - Life cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         setView()
+        let lat = UserDefaults.standard.double(forKey: "lat")
+        let lng = UserDefaults.standard.double(forKey: "lng")
+        descriptionLbl.text = "lat: \(lat), lng: \(lng)"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,14 +39,17 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
         
         animateStepView()
     }
+    
     //MARK: - Methods
     private func setView() {
-        let airBazView = walletInit.renderRadar(delegate: self)
-        
-        addChild(airBazView)
-        airBazView.view.frame = containerView.bounds
-        containerView.addSubview(airBazView.view)
-//        walletInit.stopOnline()
+        airBazView = walletInit.renderRadar(delegate: self){
+            text in
+            
+            return text.replacingOccurrences(of: "%", with: "")
+        } as? AirBazViewController
+        addChild(airBazView!)
+        airBazView!.view.frame = containerView.bounds
+        containerView.addSubview(airBazView!.view)
     }
     
     private func animateStepView() {
@@ -60,10 +68,30 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
         self.navigationController?.popToRootViewController(animated: true)
     }
 
+    @IBAction func onClickChangeAccount(_ sender: Any) {
+        changeAccount(accountNumber: "1234567890")
+//        changeLatAndLong(latitude: 19.0489671, longitude: -99.536513)
+    }
+    
+    func changeAccount(accountNumber: String) {
+        airBazView!.changeAccountNumber(accountNumber: accountNumber)
+       // walletInit.changeAccountNumber(accountNumber: accountNumber)
+    }
+    
+    func changeLatAndLong(latitude: Double, longitude: Double) {
+//        walletInit.changeLatAndLong(latitude: latitude, longitude: longitude)
+        airBazView!.changeLatAndLong(latitude: latitude, longitude: longitude)
+    }
+    
 }
 
 //MARK: - WalletSDKDelegate
 extension BAZAirBazViewController: WalletSDKDelegate {
+    func onError(_ errorCode: Int) {
+        print("=============ERROR============")
+        self.sendNotification(body: "Error codigo: \(errorCode)")
+    }
+    
 
     func sucessAtFindingDevice(name: String, apPat: String, phone: String,  accountNumber: String) {
         let completeName = name + " " + apPat
@@ -73,5 +101,23 @@ extension BAZAirBazViewController: WalletSDKDelegate {
         
         let view = BAZPaymentRouter.createModule()
         self.navigationController?.pushViewController(view, animated: true)
+    }
+
+}
+
+extension BAZAirBazViewController {
+    func sendNotification(body: String) {
+        let notificationContent = UNMutableNotificationContent()
+        notificationContent.body = body
+
+        let request = UNNotificationRequest(identifier: "testNotification",
+                                            content: notificationContent,
+                                            trigger: nil)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
     }
 }

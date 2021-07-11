@@ -11,22 +11,23 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol BAZPaymentWireframeProtocol: class {
+protocol BAZPaymentWireframeProtocol: AnyObject {
 
 }
+
 //MARK: Presenter -
-protocol BAZPaymentPresenterProtocol: class {
+protocol BAZPaymentPresenterProtocol: AnyObject {
 
 }
 
 //MARK: Interactor -
-protocol BAZPaymentInteractorProtocol: class {
-
-  var presenter: BAZPaymentPresenterProtocol?  { get set }
+protocol BAZPaymentInteractorProtocol: AnyObject {
+    
+    var presenter: BAZPaymentPresenterProtocol?  { get set }
 }
 
 //MARK: View -
-protocol BAZPaymentViewProtocol: class {
-
-  var presenter: BAZPaymentPresenterProtocol?  { get set }
+protocol BAZPaymentViewProtocol: AnyObject {
+    
+    var presenter: BAZPaymentPresenterProtocol?  { get set }
 }

@@ -42,9 +42,14 @@ class WhereDoViewController: UIViewController, WhereDoViewProtocol {
         super.viewDidAppear(animated)
         
         animateStepView()
-        setupBalance()
+//        setupBalance()
     }
+    
     //MARK: - Methods
+    func changeAccount(accountNumber: String){
+        walletInit.changeAccountNumber(accountNumber: accountNumber)
+    }
+    
     func getContacts() {
         let keys: [CNKeyDescriptor] = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName), CNContactPhoneNumbersKey as CNKeyDescriptor]
         let request = CNContactFetchRequest(keysToFetch: keys)
@@ -113,6 +118,14 @@ class WhereDoViewController: UIViewController, WhereDoViewProtocol {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func changeAccountAction(_ sender: Any) {
+        changeAccount(accountNumber: "1234567890")
+        changeLatAndLong(latitude: 19.0489671, longitude: -99.536513)
+    }
+    
+    func changeLatAndLong(latitude: Double, longitude: Double) {
+        walletInit.changeLatAndLong(latitude: latitude, longitude: longitude)
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -145,6 +158,8 @@ extension WhereDoViewController: UITableViewDataSource {
             return cell
         }
     }
+    
+    
 }
 
 //MARK: - UITableViewDelegate

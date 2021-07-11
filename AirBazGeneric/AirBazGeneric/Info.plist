@@ -40,6 +40,8 @@
 	<string>Usaremos tus contactos para mostrate a quien le puedes enviar dinero</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string> Usaremos tu red local para poder saber quienes están conectados cerca de ti</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Usaremos tu locación para encontrar dispositivos cercanos</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>

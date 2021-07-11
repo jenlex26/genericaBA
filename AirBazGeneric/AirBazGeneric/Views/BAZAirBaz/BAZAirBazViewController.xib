@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BAZAirBazViewController" customModule="AirBazGeneric" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="zHG-V1-Wu2" id="2tg-YH-GVg"/>
+                <outlet property="descriptionLbl" destination="m32-lt-BKU" id="vLO-YF-fbp"/>
                 <outlet property="stepViewWidth" destination="Te0-qv-FJd" id="Nfz-C7-KFa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -69,7 +70,7 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNk-zH-vV1">
-                    <rect key="frame" x="8" y="218" width="398" height="636"/>
+                    <rect key="frame" x="8" y="256" width="398" height="598"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHG-V1-Wu2">
                             <rect key="frame" x="0.0" y="0.0" width="398" height="450"/>
@@ -87,6 +88,16 @@
                         <constraint firstItem="zHG-V1-Wu2" firstAttribute="leading" secondItem="eNk-zH-vV1" secondAttribute="leading" id="u9o-FJ-PQz"/>
                     </constraints>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-Q8-yZ3">
+                    <rect key="frame" x="30" y="218" width="354" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="CAMBIAR CUENTA">
+                        <color key="titleColor" red="0.082352943720000002" green="0.50980395079999996" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickChangeAccount:" destination="-1" eventType="touchUpInside" id="rG6-rU-Otk"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona a la persona que quieres transferirle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m32-lt-BKU">
                     <rect key="frame" x="30" y="157" width="354" height="53"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
@@ -115,7 +126,8 @@
             <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="m32-lt-BKU" firstAttribute="leading" secondItem="o86-gN-Mub" secondAttribute="leading" constant="30" id="GvY-yb-GaQ"/>
-                <constraint firstItem="eNk-zH-vV1" firstAttribute="top" secondItem="m32-lt-BKU" secondAttribute="bottom" constant="8" id="HfC-f4-tkY"/>
+                <constraint firstItem="2TG-Q8-yZ3" firstAttribute="top" secondItem="m32-lt-BKU" secondAttribute="bottom" constant="8" id="HfC-f4-tkY"/>
+                <constraint firstItem="m32-lt-BKU" firstAttribute="trailing" secondItem="2TG-Q8-yZ3" secondAttribute="trailing" id="KPj-zc-98o"/>
                 <constraint firstItem="o86-gN-Mub" firstAttribute="bottom" secondItem="eNk-zH-vV1" secondAttribute="bottom" constant="8" id="SZJ-F8-oDa"/>
                 <constraint firstItem="o86-gN-Mub" firstAttribute="trailing" secondItem="m32-lt-BKU" secondAttribute="trailing" constant="30" id="UHM-Bk-a0Z"/>
                 <constraint firstItem="m32-lt-BKU" firstAttribute="top" secondItem="hAk-07-jmZ" secondAttribute="bottom" constant="30" id="UHm-0Q-Kex"/>
@@ -124,8 +136,10 @@
                 <constraint firstItem="eNk-zH-vV1" firstAttribute="leading" secondItem="o86-gN-Mub" secondAttribute="leading" constant="8" id="ZO9-ut-Mll"/>
                 <constraint firstItem="fhc-KA-xyY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fCY-Ql-oWF"/>
                 <constraint firstAttribute="trailing" secondItem="fhc-KA-xyY" secondAttribute="trailing" id="hvO-kF-sHP"/>
+                <constraint firstItem="eNk-zH-vV1" firstAttribute="top" secondItem="2TG-Q8-yZ3" secondAttribute="bottom" constant="8" id="jox-EJ-ej1"/>
                 <constraint firstItem="hAk-07-jmZ" firstAttribute="leading" secondItem="o86-gN-Mub" secondAttribute="leading" id="soJ-ho-Npb"/>
                 <constraint firstItem="o86-gN-Mub" firstAttribute="trailing" secondItem="eNk-zH-vV1" secondAttribute="trailing" constant="8" id="vni-kd-ZE1"/>
+                <constraint firstItem="2TG-Q8-yZ3" firstAttribute="leading" secondItem="m32-lt-BKU" secondAttribute="leading" id="xHv-gg-WPb"/>
                 <constraint firstItem="fhc-KA-xyY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zch-xJ-gx0"/>
             </constraints>
             <point key="canvasLocation" x="140" y="87.706146926536732"/>

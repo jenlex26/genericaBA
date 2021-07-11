@@ -11,22 +11,23 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol BAZHomeWireframeProtocol: class {
+protocol BAZHomeWireframeProtocol: AnyObject {
 
 }
+
 //MARK: Presenter -
-protocol BAZHomePresenterProtocol: class {
+protocol BAZHomePresenterProtocol: AnyObject {
 
 }
 
 //MARK: Interactor -
-protocol BAZHomeInteractorProtocol: class {
+protocol BAZHomeInteractorProtocol: AnyObject {
 
   var presenter: BAZHomePresenterProtocol?  { get set }
 }
 
 //MARK: View -
-protocol BAZHomeViewProtocol: class {
+protocol BAZHomeViewProtocol: AnyObject {
 
   var presenter: BAZHomePresenterProtocol?  { get set }
 }

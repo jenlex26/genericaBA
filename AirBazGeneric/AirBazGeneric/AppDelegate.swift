@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         let initView = BAZHomeRouter.createModule()
         let navController = UINavigationController(rootViewController: initView)
-        navController.isNavigationBarHidden = true
+//        navController.isNavigationBarHidden = true
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         

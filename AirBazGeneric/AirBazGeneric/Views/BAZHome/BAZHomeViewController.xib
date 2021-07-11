@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="menuStackView" destination="qDx-5k-dv4" id="aWR-s7-ixj"/>
                 <outlet property="passwordButton" destination="6F4-hV-e9m" id="QLt-pn-ey7"/>
+                <outlet property="payButton" destination="f2D-pX-ALa" id="qEs-vR-wf9"/>
+                <outlet property="payImage" destination="a6l-UM-G1f" id="u6R-eF-9lk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -159,11 +161,21 @@
                                         <constraint firstAttribute="height" constant="35" id="O8I-ra-WT4"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-pX-ALa">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <connections>
+                                        <action selector="onClickPay:" destination="-1" eventType="touchUpInside" id="E1U-rk-rPS"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94509804249999996" green="0.94901961089999998" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="f2D-pX-ALa" secondAttribute="trailing" id="3q5-XA-OPo"/>
+                                <constraint firstItem="f2D-pX-ALa" firstAttribute="leading" secondItem="My2-2B-iPs" secondAttribute="leading" id="50c-96-fOm"/>
                                 <constraint firstItem="a6l-UM-G1f" firstAttribute="centerX" secondItem="My2-2B-iPs" secondAttribute="centerX" id="5D8-Ze-ncA"/>
                                 <constraint firstItem="a6l-UM-G1f" firstAttribute="width" secondItem="a6l-UM-G1f" secondAttribute="height" multiplier="1:1" id="ZbZ-iY-MYi"/>
+                                <constraint firstItem="f2D-pX-ALa" firstAttribute="top" secondItem="My2-2B-iPs" secondAttribute="top" id="fEu-7L-w34"/>
+                                <constraint firstAttribute="bottom" secondItem="f2D-pX-ALa" secondAttribute="bottom" id="uMN-qy-SjB"/>
                                 <constraint firstItem="a6l-UM-G1f" firstAttribute="centerY" secondItem="My2-2B-iPs" secondAttribute="centerY" id="v6O-7w-wM4"/>
                                 <constraint firstAttribute="width" secondItem="My2-2B-iPs" secondAttribute="height" multiplier="1:1" id="w4w-3x-yKm"/>
                             </constraints>
@@ -177,10 +189,20 @@
                                         <constraint firstAttribute="height" constant="35" id="O0X-02-1og"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFB-nU-ebr">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <connections>
+                                        <action selector="onClickDelete:" destination="-1" eventType="touchUpInside" id="jTg-cV-vmh"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94509804249999996" green="0.94901961089999998" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstItem="IFB-nU-ebr" firstAttribute="leading" secondItem="XRL-Io-c1N" secondAttribute="leading" id="7BR-aP-07C"/>
+                                <constraint firstAttribute="bottom" secondItem="IFB-nU-ebr" secondAttribute="bottom" id="Ijm-1k-1F3"/>
+                                <constraint firstItem="IFB-nU-ebr" firstAttribute="top" secondItem="XRL-Io-c1N" secondAttribute="top" id="JZd-Ob-YgD"/>
                                 <constraint firstItem="BRp-iM-h3S" firstAttribute="centerY" secondItem="XRL-Io-c1N" secondAttribute="centerY" id="M4t-JJ-apX"/>
+                                <constraint firstAttribute="trailing" secondItem="IFB-nU-ebr" secondAttribute="trailing" id="NoG-We-6ea"/>
                                 <constraint firstItem="BRp-iM-h3S" firstAttribute="centerX" secondItem="XRL-Io-c1N" secondAttribute="centerX" id="SiI-6f-nT9"/>
                                 <constraint firstAttribute="width" secondItem="XRL-Io-c1N" secondAttribute="height" multiplier="1:1" id="qAC-tF-YWM"/>
                                 <constraint firstItem="BRp-iM-h3S" firstAttribute="width" secondItem="BRp-iM-h3S" secondAttribute="height" multiplier="1:1" id="zTU-I5-XZw"/>
@@ -195,13 +217,23 @@
                                         <constraint firstAttribute="height" constant="35" id="h8x-bT-mca"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGi-Kv-dez">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <connections>
+                                        <action selector="onClickChangeAccount:" destination="-1" eventType="touchUpInside" id="gM6-ha-MWP"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94509804249999996" green="0.94901961089999998" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
+                                <constraint firstItem="AGi-Kv-dez" firstAttribute="leading" secondItem="uEx-Lo-oiW" secondAttribute="leading" id="An0-zz-btg"/>
                                 <constraint firstItem="ydt-86-dVH" firstAttribute="centerX" secondItem="uEx-Lo-oiW" secondAttribute="centerX" id="FDn-j2-ioA"/>
                                 <constraint firstItem="ydt-86-dVH" firstAttribute="width" secondItem="ydt-86-dVH" secondAttribute="height" multiplier="1:1" id="TOq-Ux-PmQ"/>
                                 <constraint firstAttribute="width" secondItem="uEx-Lo-oiW" secondAttribute="height" multiplier="1:1" id="bqw-QF-hxf"/>
                                 <constraint firstItem="ydt-86-dVH" firstAttribute="centerY" secondItem="uEx-Lo-oiW" secondAttribute="centerY" id="ddZ-QU-Q6w"/>
+                                <constraint firstAttribute="bottom" secondItem="AGi-Kv-dez" secondAttribute="bottom" id="iAE-5J-pOP"/>
+                                <constraint firstAttribute="trailing" secondItem="AGi-Kv-dez" secondAttribute="trailing" id="rpn-wW-7J2"/>
+                                <constraint firstItem="AGi-Kv-dez" firstAttribute="top" secondItem="uEx-Lo-oiW" secondAttribute="top" id="vJb-XN-R1r"/>
                             </constraints>
                         </view>
                     </subviews>

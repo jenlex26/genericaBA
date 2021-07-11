@@ -54,15 +54,3 @@ class InitViewController: UIViewController, InitViewProtocol {
     }
 
 }
-
-//MARK: - WalletSDKDelegate
-extension InitViewController: WalletSDKDelegate {
-    func decryptText(text: String) -> String {
-        return text.replacingOccurrences(of: "$", with: "")
-    }
-    
-    func sucessAtFindingDevice(name: String, apPat: String,phone: String, accountNumber: String) {
-        let transferView = TransferRouter.createModule(accountName: name, accountApPat: apPat, accountToTransfer: accountNumber, myAccountNumber: self.accountNumber)
-        self.navigationController?.pushViewController(transferView, animated: true)
-    }
-}

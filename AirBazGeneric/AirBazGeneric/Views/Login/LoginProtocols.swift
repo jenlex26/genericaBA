@@ -11,12 +11,12 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol LoginWireframeProtocol: class {
+protocol LoginWireframeProtocol: AnyObject {
 
 }
 
 //MARK: Presenter -
-protocol LoginPresenterProtocol: class {
+protocol LoginPresenterProtocol: AnyObject {
 
     func checkTextFields(nameText: String?, surnameText: String?, accountNumber: String?)
     func nameIsEmpty(_ isEmpty: Bool)
@@ -26,7 +26,7 @@ protocol LoginPresenterProtocol: class {
 }
 
 //MARK: Interactor -
-protocol LoginInteractorProtocol: class {
+protocol LoginInteractorProtocol: AnyObject {
     
     var presenter: LoginPresenterProtocol?  { get set }
     
@@ -34,7 +34,7 @@ protocol LoginInteractorProtocol: class {
 }
 
 //MARK: View -
-protocol LoginViewProtocol: class {
+protocol LoginViewProtocol: AnyObject {
     
     var presenter: LoginPresenterProtocol?  { get set }
     

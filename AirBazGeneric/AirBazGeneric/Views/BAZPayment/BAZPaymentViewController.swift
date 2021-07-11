@@ -65,8 +65,9 @@ class BAZPaymentViewController: UIViewController, BAZPaymentViewProtocol {
         whoYouSendView.addShadow()
         
         let name = UserDefaults.standard.string(forKey: "destinationName")!
+        let accountNumber = UserDefaults.standard.string(forKey: "destinationNumber")!
         let nameSplit = name.split(separator: " ")
-        nameLabel.text = String(nameSplit[0]) + " " + String(nameSplit[1].first!) + "."
+        nameLabel.text = String(nameSplit[0]) + " " + String(nameSplit[1].first!) + "." + " - " + accountNumber
         
         let balance = UserDefaults.standard.double(forKey: "balance")
         balanceLabel.attributedText = "$\(String(format: "%.2f", balance))".priceStyle(fontSize: 15.0, weight: .medium)

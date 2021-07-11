@@ -11,6 +11,7 @@
 import UIKit
 import UserNotificationsUI
 import WalletSDK
+import CoreLocation
 
 class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
 
@@ -19,10 +20,33 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     //MARK: - @IBOutlets
     @IBOutlet weak var passwordButton: UIButton!
     @IBOutlet weak var menuStackView: UIStackView!
+    @IBOutlet weak var payImage: UIImageView!
+    @IBOutlet weak var payButton: UIButton!
     
     //MARK: - Properties
     var walletInit: WalletSDKInit?
     var submitAction: UIAlertAction!
+    let env: AirbazEnviroment = .bazProd
+    
+    var loadingView: UIView = {
+        let loadingView = UIView()
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = loadingView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        loadingView.addSubview(blurEffectView)
+        
+        loadingView.isUserInteractionEnabled = false
+        
+        return loadingView
+    }()
+    var activityIndicator: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .whiteLarge)
+        
+        return spinner
+    }()
+    let locationManager = CLLocationManager()
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -38,7 +62,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
         passwordButton.layer.cornerRadius = 35.0
         menuStackView.arrangedSubviews.forEach({ $0.layer.cornerRadius = $0.frame.width / 2 })
         
-        
+        getLocationPermissons()
     }
     
     func sendNotification(body: String) {
@@ -71,40 +95,8 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 self.navigationController?.pushViewController(view, animated: true)
                 return
             } else {
-                let name = UserDefaults.standard.string(forKey: "name")!
-                let id = UserDefaults.standard.string(forKey: "id")!
-                let nameSplit = name.split(separator: " ")
-                let phone = UserDefaults.standard.string(forKey: "phone")!
-                let accountNumber = UserDefaults.standard.string(forKey: "accountNumber")!
-                let color = UIColor.hexStringToUIColor(hex: "#4EBC8A")
                 
-                self.walletInit = WalletSDKInit.shared
-                
-                self.walletInit!.setupData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: 37.4219983, longitude: -122.084, radioColor: color, selfColor: color,env: .bazProd, onError: {
-                    errorCode in
-                    
-                    print("=============ERROR============")
-                    self.sendNotification(body: "Error codigo: \(errorCode)")
-                    
-                }) {
-                    text in
-                    
-                    return text.replacingOccurrences(of: "%", with: "")
-                }
-                
-                self.walletInit!.onMessage = {
-                    [weak self] (message, quantity) in
-                    guard let self = self else { return }
-                
-                    var newBalance = UserDefaults.standard.double(forKey: "balance")
-                    newBalance += quantity
-                    UserDefaults.standard.setValue(newBalance, forKey: "balance")
-                    self.sendNotification(body: message)
-                }
-                
-           
-                self.walletInit!.startOnline()
-    
+                initWallet()
                 
                 let view = WhereDoRouter.createModule()
                 self.navigationController?.pushViewController(view, animated: true)
@@ -153,34 +145,18 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 UserDefaults.standard.setValue(fullName, forKey: "name")
                 UserDefaults.standard.setValue(phone, forKey: "phone")
                 UserDefaults.standard.setValue(accountNumber, forKey: "accountNumber")
+                
+                let lat = UserDefaults.standard.double(forKey: "lat")
+                let lng = UserDefaults.standard.double(forKey: "lng")
                 let color = UIColor.hexStringToUIColor(hex: "#4EBC8A")
                 
                 self.walletInit = WalletSDKInit.shared
                 
-                self.walletInit!.setupData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: 37.4219983, longitude: -122.084, radioColor: color, selfColor: color, env: .bazProd, onError: {
-                    errorCode in
-                    
-                    print("=============ERROR============")
-                    self.sendNotification(body: "Error codigo: \(errorCode)")
-                    
-                    
-                }) {
-                    text in
-                    
-                    return text.replacingOccurrences(of: "%", with: "")
-                }
+                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: lat, longitude: lng, primaryColor: color, userColor: color, enviroment: self.env)
                 
-                self.walletInit!.onMessage =  {
-                    [weak self] (message, quantity) in
-                    guard let self = self else { return }
+                self.walletInit!.showLocationText = true
                 
-                    var newBalance = UserDefaults.standard.double(forKey: "balance")
-                    newBalance += quantity
-                    UserDefaults.standard.setValue(newBalance, forKey: "balance")
-                    self.sendNotification(body: message)
-                }
-                
-                self.walletInit!.startOnline()
+                self.walletInit!.timeOut = 60
 
                 let view = WhereDoRouter.createModule()
                 self.navigationController?.pushViewController(view, animated: true)
@@ -190,5 +166,159 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
         alert.addAction(cancelAction)
         alert.addAction(submitAction)
         present(alert, animated: true)
+    }
+    @IBAction func onClickPay(_ sender: UIButton) {
+        self.getCountDevices()
+    }
+    
+    @IBAction func onClickDelete(_ sender: Any) {
+        self.deleteDevice()
+    }
+    
+    @IBAction func onClickChangeAccount(_ sender: Any) {
+        changeAccount(accountNumber: "1234567890")
+    }
+}
+
+// MARK: - Location Delegate
+
+extension BAZHomeViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("1. locations = \(locValue.latitude) \(locValue.longitude)")
+        UserDefaults.standard.setValue(locValue.latitude, forKey: "lat")
+        UserDefaults.standard.setValue(locValue.longitude, forKey: "lng")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("2. locations = \(locValue.latitude) \(locValue.longitude)")
+        UserDefaults.standard.setValue(locValue.latitude, forKey: "lat")
+        UserDefaults.standard.setValue(locValue.longitude, forKey: "lng")
+    }
+}
+// MARK: - Private functions
+extension BAZHomeViewController {
+    private func getLocationPermissons(){
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestLocation()
+            
+        }
+    }
+    
+    private func deleteDevice(){
+        print("$$$$ DELETE $$$$$")
+        walletInit = WalletSDKInit.shared
+        
+        if !walletInit!.isInitializated {
+            initWallet()
+        }
+        
+        showSpinner()
+        
+        walletInit!.deleteDevice {
+            count  in
+            
+            DispatchQueue.main.async {
+                self.hideSpinner()
+                
+                let alert = UIAlertController(title: "Device Delete Count", message: String(count ?? -1) , preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Ok", style: .default) { [unowned alert] _ in
+                    alert.dismiss(animated: true)
+                }
+                
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true)
+            }
+        }
+    }
+    
+    private func getCountDevices(){
+        print("$$$$ COUNT $$$$$")
+        walletInit = WalletSDKInit.shared
+        
+        if !walletInit!.isInitializated {
+            initWallet()
+        }
+        
+        showSpinner()
+        
+        walletInit!.startDevice {
+            count  in
+            
+            DispatchQueue.main.async {
+                self.hideSpinner()
+                
+                let alert = UIAlertController(title: "Devices count", message: String(count ?? -1) , preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Ok", style: .default) { [unowned alert] _ in
+                    alert.dismiss(animated: true)
+                }
+                
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true)
+            }
+        }
+       
+    }
+    
+    private func showSpinner(){
+        self.view.addSubview(loadingView)
+        loadingView.addSubview(activityIndicator)
+        
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            loadingView.topAnchor.constraint(equalTo:self.view.topAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor)
+        ])
+        
+        activityIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
+    }
+    
+    private func hideSpinner(){
+        self.view.isUserInteractionEnabled = true
+        activityIndicator.stopAnimating()
+        loadingView.removeFromSuperview()
+        activityIndicator.removeFromSuperview()
+    }
+    
+    private func initWallet(){
+        
+        let name = UserDefaults.standard.string(forKey: "name")!
+        let nameSplit = name.split(separator: " ")
+        let phone = UserDefaults.standard.string(forKey: "phone")!
+        let accountNumber = UserDefaults.standard.string(forKey: "accountNumber")!
+        let color = UIColor.hexStringToUIColor(hex: "#4EBC8A")
+        let lat = UserDefaults.standard.double(forKey: "lat")
+        let lng = UserDefaults.standard.double(forKey: "lng")
+        
+        self.walletInit = WalletSDKInit.shared
+        
+        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color, userColor: color,enviroment: env) 
+        
+        self.walletInit?.showLocationText = true
+       
+        
+        self.walletInit!.timeOut = 60
+    }
+    
+    private func changeAccount(accountNumber: String){
+        walletInit?.changeAccountNumber(accountNumber: accountNumber)
     }
 }

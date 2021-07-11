@@ -131,9 +131,7 @@ class FinalDetailViewController: UIViewController, FinalDetailViewProtocol {
         let headers: HTTPHeaders = ["Content-Type": "application/json",
                                     "X-Custom-Header": "application/json;charset=UTF-8"]
         
-        manager.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {
-            [weak self] (response) in
-            guard let self = self else { return }
+        manager.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             
             switch response.result {
             case .success:

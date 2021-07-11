@@ -70,6 +70,8 @@ class TransferInteractor: TransferInteractorProtocol {
                 }
             case .failure:
                 self.presenter?.isTransferIncorrect()
+            @unknown default:
+                break
             }
         }
     }

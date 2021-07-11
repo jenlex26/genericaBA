@@ -11,23 +11,23 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol SuccsessfulTransferWireframeProtocol: class {
+protocol SuccsessfulTransferWireframeProtocol: AnyObject {
 
 }
 
 //MARK: Presenter -
-protocol SuccsessfulTransferPresenterProtocol: class {
+protocol SuccsessfulTransferPresenterProtocol: AnyObject {
 
 }
 
 //MARK: Interactor -
-protocol SuccsessfulTransferInteractorProtocol: class {
+protocol SuccsessfulTransferInteractorProtocol: AnyObject {
     
     var presenter: SuccsessfulTransferPresenterProtocol?  { get set }
 }
 
 //MARK: View -
-protocol SuccsessfulTransferViewProtocol: class {
+protocol SuccsessfulTransferViewProtocol: AnyObject {
     
     var presenter: SuccsessfulTransferPresenterProtocol?  { get set }
 }
