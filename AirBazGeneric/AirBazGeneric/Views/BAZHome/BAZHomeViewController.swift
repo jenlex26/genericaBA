@@ -26,7 +26,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     //MARK: - Properties
     var walletInit: WalletSDKInit?
     var submitAction: UIAlertAction!
-    let env: AirbazEnviroment = .bazProd
+    let env: AirbazEnviroment = .development
     
     var loadingView: UIView = {
         let loadingView = UIView()
@@ -81,7 +81,6 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     }
     
     deinit {
-        walletInit?.stopOnline()
 //        walletInit?.stopOffline()
     }
     
@@ -153,11 +152,14 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 self.walletInit = WalletSDKInit.shared
                 
                 self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: lat, longitude: lng, primaryColor: color, userColor: color, enviroment: self.env)
-                
+                self.walletInit!.primaryFontSize = 10
+                self.walletInit!.secondaryFontSize = 20
+                self.walletInit!.seeMorePeopleText = "Ver más"
                 self.walletInit!.showLocationText = true
                 
                 self.walletInit!.timeOut = 60
-
+ 
+                
                 let view = WhereDoRouter.createModule()
                 self.navigationController?.pushViewController(view, animated: true)
             }
@@ -313,7 +315,9 @@ extension BAZHomeViewController {
         self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color, userColor: color,enviroment: env) 
         
         self.walletInit?.showLocationText = true
-       
+        self.walletInit!.primaryFontSize = 10
+        self.walletInit!.secondaryFontSize = 20
+        self.walletInit!.seeMorePeopleText = "Ver más"
         
         self.walletInit!.timeOut = 60
     }

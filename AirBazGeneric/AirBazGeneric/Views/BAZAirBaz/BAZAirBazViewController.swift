@@ -42,11 +42,7 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
     
     //MARK: - Methods
     private func setView() {
-        airBazView = walletInit.renderRadar(delegate: self){
-            text in
-            
-            return text.replacingOccurrences(of: "%", with: "")
-        } as? AirBazViewController
+        airBazView = walletInit.renderRadar(delegate: self) as? AirBazViewController
         addChild(airBazView!)
         airBazView!.view.frame = containerView.bounds
         containerView.addSubview(airBazView!.view)
@@ -87,6 +83,10 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
 
 //MARK: - WalletSDKDelegate
 extension BAZAirBazViewController: WalletSDKDelegate {
+    func decryptText(_ text: String) -> String {        
+        return text.replacingOccurrences(of: "%", with: "")
+    }
+    
     func onError(_ errorCode: Int) {
         print("=============ERROR============")
         self.sendNotification(body: "Error codigo: \(errorCode)")
