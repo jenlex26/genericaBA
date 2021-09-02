@@ -224,31 +224,13 @@ extension BAZHomeViewController {
         
         showSpinner()
         
-//        walletInit!.deleteDevice {
-//            count  in
-//
-//            DispatchQueue.main.async {
-//                self.hideSpinner()
-//
-//                let alert = UIAlertController(title: "Device Delete Count", message: String(count ?? -1) , preferredStyle: .alert)
-//
-//                let cancelAction = UIAlertAction(title: "Ok", style: .default) { [unowned alert] _ in
-//                    alert.dismiss(animated: true)
-//                }
-//
-//                alert.addAction(cancelAction)
-//
-//                self.present(alert, animated: true)
-//            }
-//        }
-        
-        walletInit!.getToken {
-            isSuccess  in
+        walletInit!.deleteDevice {
+            count  in
 
             DispatchQueue.main.async {
                 self.hideSpinner()
 
-                let alert = UIAlertController(title: "Device Get Token", message: isSuccess ? "Exito" : "Fallo" , preferredStyle: .alert)
+                let alert = UIAlertController(title: "Device Delete Count", message: String(count ?? -1) , preferredStyle: .alert)
 
                 let cancelAction = UIAlertAction(title: "Ok", style: .default) { [unowned alert] _ in
                     alert.dismiss(animated: true)
