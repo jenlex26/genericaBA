@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004E9592651C4900E8B450C8 /* Pods_AirBazGeneric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CAD66D14DB58311D7EF6C2 /* Pods_AirBazGeneric.framework */; };
+		74F3E6560CA2119E8740AF52 /* Pods_AirBazGeneric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BEA8F51770479638175C33 /* Pods_AirBazGeneric.framework */; };
 		980F304A265AD958000FAEC6 /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980F3048265AD958000FAEC6 /* ContactsCell.xib */; };
 		980F304B265AD958000FAEC6 /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F3049265AD958000FAEC6 /* ContactsCell.swift */; };
 		A528E65E263C6E9500B76EDF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528E658263C6E9500B76EDF /* LoginPresenter.swift */; };
@@ -62,8 +62,6 @@
 		A59EEB772639B321001477CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB762639B321001477CD /* Assets.xcassets */; };
 		A59EEB7A2639B321001477CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59EEB782639B321001477CD /* LaunchScreen.storyboard */; };
 		A5A8A9AB2640777D00FF58EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8A9AA2640777D00FF58EC /* Colors.swift */; };
-		A5C40E17264C83C0000301DC /* WalletSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; };
-		A5C40E18264C83C0000301DC /* WalletSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A59EEBC42639BB66001477CD /* WalletSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5CF4CC0265CB01300B17FDF /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF4CBF265CB01300B17FDF /* Rechability.swift */; };
 		A5D9B6412656BD9D0047FC62 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63B2656BD9D0047FC62 /* HomePresenter.swift */; };
 		A5D9B6422656BD9D0047FC62 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B63C2656BD9D0047FC62 /* HomeRouter.swift */; };
@@ -106,6 +104,8 @@
 		A5E5F1612658D6610012EB55 /* AccountsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5F15F2658D6610012EB55 /* AccountsCell.swift */; };
 		A5E5F1622658D6610012EB55 /* AccountsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F1602658D6610012EB55 /* AccountsCell.xib */; };
 		A5E5F164265985E50012EB55 /* ResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F163265985E50012EB55 /* ResumeViewController.xib */; };
+		A5E777C326D4478A006D441F /* AirBaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E777C226D4478A006D441F /* AirBaz.framework */; };
+		A5E777C426D4478A006D441F /* AirBaz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5E777C226D4478A006D441F /* AirBaz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,13 +119,13 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5C40E19264C83C0000301DC /* Embed Frameworks */ = {
+		A5E777C526D4478A006D441F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A5C40E18264C83C0000301DC /* WalletSDK.framework in Embed Frameworks */,
+				A5E777C426D4478A006D441F /* AirBaz.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,10 +133,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		61C34709210CC08C31DB9502 /* Pods-AirBazGeneric.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.release.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.release.xcconfig"; sourceTree = "<group>"; };
-		816CEEF0076C8D36D8236CF9 /* Pods-AirBazGeneric.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.debug.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.debug.xcconfig"; sourceTree = "<group>"; };
+		0FBDA8F30174D5BBC570FB81 /* Pods-AirBazGeneric.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.release.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.release.xcconfig"; sourceTree = "<group>"; };
+		31BEA8F51770479638175C33 /* Pods_AirBazGeneric.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBazGeneric.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		859D5078266DB969004804D0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		92CAD66D14DB58311D7EF6C2 /* Pods_AirBazGeneric.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBazGeneric.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980F3048265AD958000FAEC6 /* ContactsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
 		980F3049265AD958000FAEC6 /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		A528E658263C6E9500B76EDF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -166,6 +165,8 @@
 		A52BE42A26581A230053CC36 /* BAZPaymentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentProtocols.swift; sourceTree = "<group>"; };
 		A52BE42B26581A230053CC36 /* BAZPaymentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAZPaymentInteractor.swift; sourceTree = "<group>"; };
 		A52BE42C26581A230053CC36 /* BAZPaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAZPaymentViewController.xib; sourceTree = "<group>"; };
+		A54C1A1126C593FA00EA8FD2 /* WalletSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletSDKTests.swift; sourceTree = "<group>"; };
+		A54C1A1326C593FA00EA8FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58B9B542642F2F7001664EB /* SuccsessfulTransferRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferRouter.swift; sourceTree = "<group>"; };
 		A58B9B552642F2F7001664EB /* SuccsessfulTransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccsessfulTransferViewController.xib; sourceTree = "<group>"; };
 		A58B9B562642F2F7001664EB /* SuccsessfulTransferPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccsessfulTransferPresenter.swift; sourceTree = "<group>"; };
@@ -236,6 +237,8 @@
 		A5E5F15F2658D6610012EB55 /* AccountsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCell.swift; sourceTree = "<group>"; };
 		A5E5F1602658D6610012EB55 /* AccountsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsCell.xib; sourceTree = "<group>"; };
 		A5E5F163265985E50012EB55 /* ResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumeViewController.xib; sourceTree = "<group>"; };
+		A5E777C226D4478A006D441F /* AirBaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AirBaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90FA7C56A03787DFCE2C5A5 /* Pods-AirBazGeneric.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.debug.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,19 +246,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C40E17264C83C0000301DC /* WalletSDK.framework in Frameworks */,
-				004E9592651C4900E8B450C8 /* Pods_AirBazGeneric.framework in Frameworks */,
+				A5E777C326D4478A006D441F /* AirBaz.framework in Frameworks */,
+				74F3E6560CA2119E8740AF52 /* Pods_AirBazGeneric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62F6B665986A8447437B0078 /* Pods */ = {
+		23B1C00709B8E75B712F891D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				816CEEF0076C8D36D8236CF9 /* Pods-AirBazGeneric.debug.xcconfig */,
-				61C34709210CC08C31DB9502 /* Pods-AirBazGeneric.release.xcconfig */,
+				E90FA7C56A03787DFCE2C5A5 /* Pods-AirBazGeneric.debug.xcconfig */,
+				0FBDA8F30174D5BBC570FB81 /* Pods-AirBazGeneric.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -336,6 +339,15 @@
 			path = BAZPayment;
 			sourceTree = "<group>";
 		};
+		A54C1A1026C593FA00EA8FD2 /* WalletSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				A54C1A1126C593FA00EA8FD2 /* WalletSDKTests.swift */,
+				A54C1A1326C593FA00EA8FD2 /* Info.plist */,
+			);
+			path = WalletSDKTests;
+			sourceTree = "<group>";
+		};
 		A553C1C42642F21300EF35B0 /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,9 +414,10 @@
 			isa = PBXGroup;
 			children = (
 				A59EEB6C2639B320001477CD /* AirBazGeneric */,
+				A54C1A1026C593FA00EA8FD2 /* WalletSDKTests */,
 				A59EEB6B2639B320001477CD /* Products */,
-				62F6B665986A8447437B0078 /* Pods */,
 				B380EB6896CECCA14CBE815D /* Frameworks */,
+				23B1C00709B8E75B712F891D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -554,9 +567,10 @@
 		B380EB6896CECCA14CBE815D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5E777C226D4478A006D441F /* AirBaz.framework */,
 				A59EEBC42639BB66001477CD /* WalletSDK.framework */,
-				92CAD66D14DB58311D7EF6C2 /* Pods_AirBazGeneric.framework */,
 				859D5078266DB969004804D0 /* Intents.framework */,
+				31BEA8F51770479638175C33 /* Pods_AirBazGeneric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -568,13 +582,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A59EEB7E2639B321001477CD /* Build configuration list for PBXNativeTarget "AirBazGeneric" */;
 			buildPhases = (
-				98E7A9637C0F032D998304C2 /* [CP] Check Pods Manifest.lock */,
+				A3362B2379AB282FFED28945 /* [CP] Check Pods Manifest.lock */,
 				A59EEB662639B320001477CD /* Sources */,
 				A59EEB672639B320001477CD /* Frameworks */,
 				A59EEB682639B320001477CD /* Resources */,
-				1926C39775CE7F873D35AD1B /* [CP] Embed Pods Frameworks */,
-				A5C40E19264C83C0000301DC /* Embed Frameworks */,
 				859D5084266DB969004804D0 /* Embed App Extensions */,
+				A5E777C526D4478A006D441F /* Embed Frameworks */,
+				2D5DBCC4D61CD077ED705964 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -645,7 +659,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1926C39775CE7F873D35AD1B /* [CP] Embed Pods Frameworks */ = {
+		2D5DBCC4D61CD077ED705964 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -662,7 +676,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98E7A9637C0F032D998304C2 /* [CP] Check Pods Manifest.lock */ = {
+		A3362B2379AB282FFED28945 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -905,7 +919,7 @@
 		};
 		A59EEB7F2639B321001477CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 816CEEF0076C8D36D8236CF9 /* Pods-AirBazGeneric.debug.xcconfig */;
+			baseConfigurationReference = E90FA7C56A03787DFCE2C5A5 /* Pods-AirBazGeneric.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -929,7 +943,7 @@
 		};
 		A59EEB802639B321001477CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61C34709210CC08C31DB9502 /* Pods-AirBazGeneric.release.xcconfig */;
+			baseConfigurationReference = 0FBDA8F30174D5BBC570FB81 /* Pods-AirBazGeneric.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

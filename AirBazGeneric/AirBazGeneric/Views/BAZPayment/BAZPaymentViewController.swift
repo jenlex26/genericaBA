@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 
 class BAZPaymentViewController: UIViewController, BAZPaymentViewProtocol {
 
@@ -25,7 +25,7 @@ class BAZPaymentViewController: UIViewController, BAZPaymentViewProtocol {
     @IBOutlet weak var amountTextField: UITextField!
 
     //MARK: - Properties
-    var walletInit: WalletSDKInit = WalletSDKInit.shared
+    var walletInit: AirBazInit = AirBazInit.shared
     
     //MARK: - Life cycle
 	override func viewDidLoad() {

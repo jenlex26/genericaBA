@@ -10,7 +10,7 @@
 
 import UIKit
 import Contacts
-import WalletSDK
+import AirBaz
 
 class WhereDoViewController: UIViewController, WhereDoViewProtocol {
     
@@ -28,7 +28,7 @@ class WhereDoViewController: UIViewController, WhereDoViewProtocol {
     //MARK: - Properties
     var contacts = [CNContact]()
     let contactStore = CNContactStore()
-    var walletInit: WalletSDKInit = WalletSDKInit.shared
+    var walletInit: AirBazInit = AirBazInit.shared
     
     //MARK: - Life cycle
     override func viewDidLoad() {

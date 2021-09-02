@@ -9,13 +9,13 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 
 class FinalDetailRouter: FinalDetailWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule(walletInit: WalletSDKInit) -> UIViewController {
+    static func createModule(walletInit: AirBazInit) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = FinalDetailViewController(nibName: "FinalDetailViewController", bundle: nil)
         view.walletInit = walletInit

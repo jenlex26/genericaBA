@@ -10,7 +10,7 @@
 
 import UIKit
 import UserNotificationsUI
-import WalletSDK
+import AirBaz
 import CoreLocation
 
 class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
@@ -24,7 +24,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     @IBOutlet weak var payButton: UIButton!
     
     //MARK: - Properties
-    var walletInit: WalletSDKInit?
+    var walletInit: AirBazInit?
     var submitAction: UIAlertAction!
     let env: AirbazEnviroment = .development
     
@@ -149,13 +149,13 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 let lng = UserDefaults.standard.double(forKey: "lng")
                 let color = UIColor.hexStringToUIColor(hex: "#4EBC8A")
                 
-                self.walletInit = WalletSDKInit.shared
+                self.walletInit = AirBazInit.shared
                 
-                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: lat, longitude: lng, primaryColor: color, userColor: color, enviroment: self.env)
+                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: lat, longitude: lng, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
                 self.walletInit!.primaryFontSize = 10
                 self.walletInit!.secondaryFontSize = 20
                 self.walletInit!.seeMorePeopleText = "Ver más"
-                self.walletInit!.showLocationText = true
+//                self.walletInit!.showLocationText = true
                 
                 self.walletInit!.timeOut = 60
  
@@ -216,7 +216,7 @@ extension BAZHomeViewController {
     
     private func deleteDevice(){
         print("$$$$ DELETE $$$$$")
-        walletInit = WalletSDKInit.shared
+        walletInit = AirBazInit.shared
         
         if !walletInit!.isInitializated {
             initWallet()
@@ -224,20 +224,38 @@ extension BAZHomeViewController {
         
         showSpinner()
         
-        walletInit!.deleteDevice {
-            count  in
-            
+//        walletInit!.deleteDevice {
+//            count  in
+//
+//            DispatchQueue.main.async {
+//                self.hideSpinner()
+//
+//                let alert = UIAlertController(title: "Device Delete Count", message: String(count ?? -1) , preferredStyle: .alert)
+//
+//                let cancelAction = UIAlertAction(title: "Ok", style: .default) { [unowned alert] _ in
+//                    alert.dismiss(animated: true)
+//                }
+//
+//                alert.addAction(cancelAction)
+//
+//                self.present(alert, animated: true)
+//            }
+//        }
+        
+        walletInit!.getToken {
+            isSuccess  in
+
             DispatchQueue.main.async {
                 self.hideSpinner()
-                
-                let alert = UIAlertController(title: "Device Delete Count", message: String(count ?? -1) , preferredStyle: .alert)
-                
+
+                let alert = UIAlertController(title: "Device Get Token", message: isSuccess ? "Exito" : "Fallo" , preferredStyle: .alert)
+
                 let cancelAction = UIAlertAction(title: "Ok", style: .default) { [unowned alert] _ in
                     alert.dismiss(animated: true)
                 }
-                
+
                 alert.addAction(cancelAction)
-                
+
                 self.present(alert, animated: true)
             }
         }
@@ -245,7 +263,7 @@ extension BAZHomeViewController {
     
     private func getCountDevices(){
         print("$$$$ COUNT $$$$$")
-        walletInit = WalletSDKInit.shared
+        walletInit = AirBazInit.shared
         
         if !walletInit!.isInitializated {
             initWallet()
@@ -310,16 +328,19 @@ extension BAZHomeViewController {
         let lat = UserDefaults.standard.double(forKey: "lat")
         let lng = UserDefaults.standard.double(forKey: "lng")
         
-        self.walletInit = WalletSDKInit.shared
+        self.walletInit = AirBazInit.shared
         
-        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color, userColor: color,enviroment: env) 
+        print(self.walletInit!.isConnectedOnline)
+        
+        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
         
         self.walletInit?.showLocationText = true
         self.walletInit!.primaryFontSize = 10
         self.walletInit!.secondaryFontSize = 20
-        self.walletInit!.seeMorePeopleText = "Ver más"
         
         self.walletInit!.timeOut = 60
+        
+       
     }
     
     private func changeAccount(accountNumber: String){

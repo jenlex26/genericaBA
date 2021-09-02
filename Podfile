@@ -9,9 +9,7 @@ target 'AirBazGeneric' do
   project 'AirBazGeneric/AirBazGeneric.xcodeproj'
 end
 
-target 'WalletSDK' do
-  # Pods for WalletSDK
-  pod 'Alamofire', '~> 4.8.2'
-
-  project 'WalletSDK/WalletSDK.xcodeproj'
+target 'AirBaz' do
+  # Pods for AirBaz
+  project 'AirBaz/AirBaz.xcodeproj'
 end

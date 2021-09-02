@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 
 class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
 
@@ -21,7 +21,7 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
     @IBOutlet weak var descriptionLbl: UILabel!
     
     //MARK: - Properties
-    var walletInit: WalletSDKInit = WalletSDKInit.shared
+    var walletInit: AirBazInit = AirBazInit.shared
     var airBazView: AirBazViewController?
     
     //MARK: - Life cycle
@@ -29,8 +29,9 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
         super.viewDidLoad()
         
         setView()
-        let lat = UserDefaults.standard.double(forKey: "lat")
-        let lng = UserDefaults.standard.double(forKey: "lng")
+        let lat = walletInit.latitude
+        let lng = walletInit.longitude
+
         descriptionLbl.text = "lat: \(lat), lng: \(lng)"
     }
     
@@ -42,7 +43,11 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
     
     //MARK: - Methods
     private func setView() {
-        airBazView = walletInit.renderRadar(delegate: self) as? AirBazViewController
+        airBazView = walletInit.renderRadar(labelColor: .blue, delegate: self) as? AirBazViewController
+        walletInit.showHelpText = false
+        walletInit.seeMorePeopleText = "Wachar mas"
+        walletInit.showInitialsCircle = false
+        walletInit.showLocationText = false
         addChild(airBazView!)
         airBazView!.view.frame = containerView.bounds
         containerView.addSubview(airBazView!.view)
@@ -82,7 +87,7 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
 }
 
 //MARK: - WalletSDKDelegate
-extension BAZAirBazViewController: WalletSDKDelegate {
+extension BAZAirBazViewController: AirbazDelegate {
     func decryptText(_ text: String) -> String {        
         return text.replacingOccurrences(of: "%", with: "")
     }
@@ -101,6 +106,10 @@ extension BAZAirBazViewController: WalletSDKDelegate {
         
         let view = BAZPaymentRouter.createModule()
         self.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    func helpAction() {
+        
     }
 
 }

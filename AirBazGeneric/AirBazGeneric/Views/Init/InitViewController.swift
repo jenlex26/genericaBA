@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 
 class InitViewController: UIViewController, InitViewProtocol {
 

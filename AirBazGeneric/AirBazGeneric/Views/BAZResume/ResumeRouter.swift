@@ -9,13 +9,13 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 
 class ResumeRouter: ResumeWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule(walletInit: WalletSDKInit) -> UIViewController {
+    static func createModule(walletInit: AirBazInit) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = ResumeViewController(nibName: "ResumeViewController", bundle: nil)
         view.walletInit = walletInit

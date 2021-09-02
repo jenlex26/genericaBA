@@ -5,9 +5,9 @@
       location = "group:AirBazGeneric/AirBazGeneric.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:WalletSDK/WalletSDK.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:AirBaz/AirBaz.xcodeproj">
    </FileRef>
 </Workspace>

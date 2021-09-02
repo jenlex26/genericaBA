@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 import Alamofire
 
 class FinalDetailViewController: UIViewController, FinalDetailViewProtocol {
@@ -23,7 +23,7 @@ class FinalDetailViewController: UIViewController, FinalDetailViewProtocol {
     @IBOutlet weak var destinationNameLabel: UILabel!
     
     //MARK: - Properties
-    var walletInit: WalletSDKInit!
+    var walletInit: AirBazInit!
 
     //MARK: - Life cycle
 	override func viewDidLoad() {

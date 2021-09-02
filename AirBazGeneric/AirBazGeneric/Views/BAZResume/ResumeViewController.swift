@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import WalletSDK
+import AirBaz
 
 class ResumeViewController: UIViewController, ResumeViewProtocol {
     
@@ -23,7 +23,7 @@ class ResumeViewController: UIViewController, ResumeViewProtocol {
     @IBOutlet weak var nameLabel: UILabel!
     
     //MARK: - Properties
-    var walletInit: WalletSDKInit!
+    var walletInit: AirBazInit!
 
     //MARK: - Life cycle
 	override func viewDidLoad() {
