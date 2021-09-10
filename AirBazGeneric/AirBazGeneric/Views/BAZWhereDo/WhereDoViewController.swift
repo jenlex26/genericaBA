@@ -28,7 +28,7 @@ class WhereDoViewController: UIViewController, WhereDoViewProtocol {
     //MARK: - Properties
     var contacts = [CNContact]()
     let contactStore = CNContactStore()
-    var walletInit: AirBazInit = AirBazInit.shared
+    var walletInit: AirBazFacade = AirBazFacade()
     
     //MARK: - Life cycle
     override func viewDidLoad() {

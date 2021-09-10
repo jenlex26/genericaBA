@@ -21,7 +21,7 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
     @IBOutlet weak var descriptionLbl: UILabel!
     
     //MARK: - Properties
-    var walletInit: AirBazInit = AirBazInit.shared
+    var walletInit: AirBazFacade = AirBazFacade()
     var airBazView: AirBazViewController?
     
     //MARK: - Life cycle
@@ -43,7 +43,7 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
     
     //MARK: - Methods
     private func setView() {
-        airBazView = walletInit.renderRadar(labelColor: .blue, delegate: self) as? AirBazViewController
+        airBazView = walletInit.renderRadar(labelColor: UIColor.blue, delegate: self) as? AirBazViewController
         walletInit.showHelpText = false
         walletInit.seeMorePeopleText = "Wachar mas"
         walletInit.showInitialsCircle = false

@@ -23,7 +23,7 @@ class FinalDetailViewController: UIViewController, FinalDetailViewProtocol {
     @IBOutlet weak var destinationNameLabel: UILabel!
     
     //MARK: - Properties
-    var walletInit: AirBazInit!
+    var walletInit: AirBazFacade!
 
     //MARK: - Life cycle
 	override func viewDidLoad() {

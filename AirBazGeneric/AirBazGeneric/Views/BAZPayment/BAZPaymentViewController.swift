@@ -25,7 +25,7 @@ class BAZPaymentViewController: UIViewController, BAZPaymentViewProtocol {
     @IBOutlet weak var amountTextField: UITextField!
 
     //MARK: - Properties
-    var walletInit: AirBazInit = AirBazInit.shared
+    var walletInit: AirBazFacade = AirBazFacade()
     
     //MARK: - Life cycle
 	override func viewDidLoad() {

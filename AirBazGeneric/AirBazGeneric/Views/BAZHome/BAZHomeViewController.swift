@@ -24,7 +24,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     @IBOutlet weak var payButton: UIButton!
     
     //MARK: - Properties
-    var walletInit: AirBazInit?
+    var walletInit: AirBazFacade?
     var submitAction: UIAlertAction!
     let env: AirbazEnviroment = .development
     
@@ -149,9 +149,9 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 let lng = UserDefaults.standard.double(forKey: "lng")
                 let color = UIColor.hexStringToUIColor(hex: "#4EBC8A")
                 
-                self.walletInit = AirBazInit.shared
+                self.walletInit = AirBazFacade()
                 
-                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: lat, longitude: lng, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
+                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: 19.3093, longitude: -99.1873, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
                 self.walletInit!.primaryFontSize = 10
                 self.walletInit!.secondaryFontSize = 20
                 self.walletInit!.seeMorePeopleText = "Ver más"
@@ -216,7 +216,7 @@ extension BAZHomeViewController {
     
     private func deleteDevice(){
         print("$$$$ DELETE $$$$$")
-        walletInit = AirBazInit.shared
+        walletInit = AirBazFacade()
         
         if !walletInit!.isInitializated {
             initWallet()
@@ -245,7 +245,7 @@ extension BAZHomeViewController {
     
     private func getCountDevices(){
         print("$$$$ COUNT $$$$$")
-        walletInit = AirBazInit.shared
+        walletInit = AirBazFacade()
         
         if !walletInit!.isInitializated {
             initWallet()
@@ -310,11 +310,11 @@ extension BAZHomeViewController {
         let lat = UserDefaults.standard.double(forKey: "lat")
         let lng = UserDefaults.standard.double(forKey: "lng")
         
-        self.walletInit = AirBazInit.shared
+        self.walletInit = AirBazFacade()
         
         print(self.walletInit!.isConnectedOnline)
         
-        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
+        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: 19.3093, longitude: -99.1873, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
         
         self.walletInit?.showLocationText = true
         self.walletInit!.primaryFontSize = 10

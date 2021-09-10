@@ -15,7 +15,7 @@ class ResumeRouter: ResumeWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule(walletInit: AirBazInit) -> UIViewController {
+    static func createModule(walletInit: AirBazFacade) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = ResumeViewController(nibName: "ResumeViewController", bundle: nil)
         view.walletInit = walletInit

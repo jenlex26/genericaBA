@@ -23,7 +23,7 @@ class ResumeViewController: UIViewController, ResumeViewProtocol {
     @IBOutlet weak var nameLabel: UILabel!
     
     //MARK: - Properties
-    var walletInit: AirBazInit!
+    var walletInit: AirBazFacade!
 
     //MARK: - Life cycle
 	override func viewDidLoad() {
