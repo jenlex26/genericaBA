@@ -26,7 +26,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     //MARK: - Properties
     var walletInit: AirBazFacade?
     var submitAction: UIAlertAction!
-    let env: AirbazEnviroment = .development
+    let env: AirbazEnviroment = .qa
     
     var loadingView: UIView = {
         let loadingView = UIView()
@@ -151,7 +151,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 
                 self.walletInit = AirBazFacade()
                 
-                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: 19.3093, longitude: -99.1873, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
+                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: 19.29625544000643, longitude: -99.18563856055731, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
                 self.walletInit!.primaryFontSize = 10
                 self.walletInit!.secondaryFontSize = 20
                 self.walletInit!.seeMorePeopleText = "Ver más"
@@ -314,7 +314,7 @@ extension BAZHomeViewController {
         
         print(self.walletInit!.isConnectedOnline)
         
-        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: 19.3093, longitude: -99.1873, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
+        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: 19.29625544000643, longitude: -99.18563856055731, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
         
         self.walletInit?.showLocationText = true
         self.walletInit!.primaryFontSize = 10
