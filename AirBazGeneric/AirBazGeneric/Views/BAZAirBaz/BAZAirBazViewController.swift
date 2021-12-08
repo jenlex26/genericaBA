@@ -29,21 +29,22 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
         super.viewDidLoad()
         
         setView()
-        let lat = walletInit.latitude
-        let lng = walletInit.longitude
-
-        descriptionLbl.text = "lat: \(lat), lng: \(lng)"
+        descriptionLbl.text = "serviceTypes: \(walletInit.serviceTypes)"
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         animateStepView()
+        walletInit.endSession()
+//        walletInit.endSession()
     }
     
     //MARK: - Methods
     private func setView() {
         airBazView = walletInit.renderRadar(labelColor: UIColor.blue, delegate: self) as? AirBazViewController
+
+        walletInit.delegateConnection = self
         walletInit.showHelpText = false
         walletInit.seeMorePeopleText = "Wachar mas"
         walletInit.showInitialsCircle = false
@@ -104,18 +105,72 @@ extension BAZAirBazViewController: AirbazDelegate {
         UserDefaults.standard.setValue(accountNumber, forKey: "destinationNumber")
         UserDefaults.standard.setValue(phone, forKey: "destinationPhoneNumber")
         
-        let view = BAZPaymentRouter.createModule()
-        self.navigationController?.pushViewController(view, animated: true)
+        Self.showSpinner()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 , execute: {
+            self.walletInit.inviteSession(accountNumber: accountNumber, serviceType: "wallet-search")
+        })
     }
     
     func helpAction() {
         
     }
+}
 
+//MARK: - AirBazConnectionDelegate
+extension BAZAirBazViewController: AirBazSessionDelegate {
+    func onConnection() {
+        print("AIRBAZGENERIC: Connected :)")
+        
+        BAZAirBazViewController.hideSpinner()
+ 
+        let view = BAZPaymentRouter.createModule()
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    func onDisconnect() {
+        self.navigationController?.popToViewController(self, animated: true)
+        sendNotification(body: "Desconectado ☠️")
+    }
+    
+    func onError(error: Error) {
+        BAZAirBazViewController.hideSpinner()
+        
+        switch error {
+        case AirBazSessionError.notFound:
+            sendNotification(body: "No esta offline 📶")
+        case AirBazSessionError.alredyConnected:
+            sendNotification(body: "Ya se encuentra conectado ⛔️")
+        default:
+            break
+        }
+        
+        print("AIRBAZGENERIC: Error :( \(error.localizedDescription)")
+    }
+    
+    func onMessage(message data: Data, serviceType: String) {
+        print("AIRBAZGENERIC: Message nwn")
+
+        let convertedString = String(data: data, encoding: String.Encoding.utf8)
+        debugPrint("AIRBAZGENERIC: \(convertedString ?? "defaultvalue")")
+        
+        let decoder = JSONDecoder()
+        
+        guard let response = try? decoder.decode(Message.self, from: data) else {
+            print("AIRBAZGENERIC: Bad Message :c")
+            return
+        }
+        
+        print("AIRBAZGENERIC: \(response)")
+        
+        
+        
+        sendNotification(body: "\(response.text ?? "No hay un mensaje 🚬") del canal \(serviceType)")
+    }
 }
 
 extension BAZAirBazViewController {
-    func sendNotification(body: String) {
+    private func sendNotification(body: String) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.body = body
 

@@ -106,6 +106,9 @@
 		A5E5F164265985E50012EB55 /* ResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E5F163265985E50012EB55 /* ResumeViewController.xib */; };
 		A5E777C326D4478A006D441F /* AirBaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E777C226D4478A006D441F /* AirBaz.framework */; };
 		A5E777C426D4478A006D441F /* AirBaz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5E777C226D4478A006D441F /* AirBaz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A948882127501D50002CA8F2 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948882027501D50002CA8F2 /* Spinner.swift */; };
+		A948882327501EF5002CA8F2 /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948882227501EF5002CA8F2 /* UIViewController+Spinner.swift */; };
+		A9488826275025B7002CA8F2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488825275025B7002CA8F2 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -238,6 +241,9 @@
 		A5E5F1602658D6610012EB55 /* AccountsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsCell.xib; sourceTree = "<group>"; };
 		A5E5F163265985E50012EB55 /* ResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumeViewController.xib; sourceTree = "<group>"; };
 		A5E777C226D4478A006D441F /* AirBaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AirBaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A948882027501D50002CA8F2 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		A948882227501EF5002CA8F2 /* UIViewController+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Spinner.swift"; sourceTree = "<group>"; };
+		A9488825275025B7002CA8F2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E90FA7C56A03787DFCE2C5A5 /* Pods-AirBazGeneric.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBazGeneric.debug.xcconfig"; path = "Target Support Files/Pods-AirBazGeneric/Pods-AirBazGeneric.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +291,7 @@
 				A528E66C263C78EE00B76EDF /* ViewAnimation.swift */,
 				A58B9B8E26430DDD001664EB /* CircleNameImage.swift */,
 				A5CF4CBF265CB01300B17FDF /* Rechability.swift */,
+				A948882027501D50002CA8F2 /* Spinner.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 				A58B9B9026430E2D001664EB /* UIImageExtension.swift */,
 				A58B9B9226430E4D001664EB /* UIColorExtension.swift */,
 				A5D9B6652656E77F0047FC62 /* StringExtension.swift */,
+				A948882227501EF5002CA8F2 /* UIViewController+Spinner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -468,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A8A9AA2640777D00FF58EC /* Colors.swift */,
+				A9488825275025B7002CA8F2 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -724,6 +733,7 @@
 				A5E5F15526587E670012EB55 /* ResumeViewController.swift in Sources */,
 				A528E662263C6E9500B76EDF /* LoginInteractor.swift in Sources */,
 				A58B9B89264304C3001664EB /* InitProtocols.swift in Sources */,
+				A9488826275025B7002CA8F2 /* Message.swift in Sources */,
 				A5D9B6662656E77F0047FC62 /* StringExtension.swift in Sources */,
 				A5E5F14826587BCB0012EB55 /* FinalDetailProtocols.swift in Sources */,
 				A52BE4242658126E0053CC36 /* BAZAirBazInteractor.swift in Sources */,
@@ -744,6 +754,7 @@
 				A52BE414265801090053CC36 /* BAZHomeRouter.swift in Sources */,
 				A528E661263C6E9500B76EDF /* LoginProtocols.swift in Sources */,
 				A5E5F14726587BCB0012EB55 /* FinalDetailRouter.swift in Sources */,
+				A948882127501D50002CA8F2 /* Spinner.swift in Sources */,
 				A58B9B8A264304C3001664EB /* InitInteractor.swift in Sources */,
 				A58B9B7C2642FDA3001664EB /* TransferProtocols.swift in Sources */,
 				A528E668263C704500B76EDF /* TextField.swift in Sources */,
@@ -763,6 +774,7 @@
 				A5D9B6802656F22E0047FC62 /* MenuInteractor.swift in Sources */,
 				A5D9B6842656F4E50047FC62 /* CustomTabController.swift in Sources */,
 				A58B9B9326430E4D001664EB /* UIColorExtension.swift in Sources */,
+				A948882327501EF5002CA8F2 /* UIViewController+Spinner.swift in Sources */,
 				A52BE42F26581A230053CC36 /* BAZPaymentViewController.swift in Sources */,
 				A5D9B67E2656F22E0047FC62 /* MenuViewController.swift in Sources */,
 				A5E5F132265873F60012EB55 /* WhereDoRouter.swift in Sources */,

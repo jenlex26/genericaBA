@@ -26,26 +26,8 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
     //MARK: - Properties
     var walletInit: AirBazFacade?
     var submitAction: UIAlertAction!
-    let env: AirbazEnviroment = .qa
+    let env: AirbazEnviroment = .development
     
-    var loadingView: UIView = {
-        let loadingView = UIView()
-        
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = loadingView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        loadingView.addSubview(blurEffectView)
-        
-        loadingView.isUserInteractionEnabled = false
-        
-        return loadingView
-    }()
-    var activityIndicator: UIActivityIndicatorView = {
-        let spinner = UIActivityIndicatorView(style: .whiteLarge)
-        
-        return spinner
-    }()
     let locationManager = CLLocationManager()
     
     //MARK: - Life cycle
@@ -55,6 +37,11 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
         setView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        walletInit?.endSession()
+    }
     //MARK: - Methods
     private func setView() {
         passwordButton.layer.borderWidth = 4.0
@@ -151,7 +138,7 @@ class BAZHomeViewController: UIViewController, BAZHomeViewProtocol {
                 
                 self.walletInit = AirBazFacade()
                 
-                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: 19.29625544000643, longitude: -99.18563856055731, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
+                self.walletInit!.setData(accountNumber: accountNumber, name: name, apPat: apPat, phone: phone, latitude: lat, longitude: lng, primaryColor: color, enviroment: self.env, colors: [.blue, .brown])
                 self.walletInit!.primaryFontSize = 10
                 self.walletInit!.secondaryFontSize = 20
                 self.walletInit!.seeMorePeopleText = "Ver más"
@@ -222,13 +209,13 @@ extension BAZHomeViewController {
             initWallet()
         }
         
-        showSpinner()
+        Self.showSpinner()
         
         walletInit!.deleteDevice {
             count  in
 
             DispatchQueue.main.async {
-                self.hideSpinner()
+                Self.hideSpinner()
 
                 let alert = UIAlertController(title: "Device Delete Count", message: String(count ?? -1) , preferredStyle: .alert)
 
@@ -251,13 +238,13 @@ extension BAZHomeViewController {
             initWallet()
         }
         
-        showSpinner()
+        Self.showSpinner()
         
         walletInit!.startDevice {
             count  in
             
             DispatchQueue.main.async {
-                self.hideSpinner()
+                Self.hideSpinner()
                 
                 let alert = UIAlertController(title: "Devices count", message: String(count ?? -1) , preferredStyle: .alert)
                 
@@ -273,33 +260,6 @@ extension BAZHomeViewController {
        
     }
     
-    private func showSpinner(){
-        self.view.addSubview(loadingView)
-        loadingView.addSubview(activityIndicator)
-        
-        loadingView.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            loadingView.topAnchor.constraint(equalTo:self.view.topAnchor),
-            loadingView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            loadingView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            loadingView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            activityIndicator.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor)
-        ])
-        
-        activityIndicator.startAnimating()
-        self.view.isUserInteractionEnabled = false
-    }
-    
-    private func hideSpinner(){
-        self.view.isUserInteractionEnabled = true
-        activityIndicator.stopAnimating()
-        loadingView.removeFromSuperview()
-        activityIndicator.removeFromSuperview()
-    }
-    
     private func initWallet(){
         
         let name = UserDefaults.standard.string(forKey: "name")!
@@ -312,17 +272,19 @@ extension BAZHomeViewController {
         
         self.walletInit = AirBazFacade()
         
-        print(self.walletInit!.isConnectedOnline)
+        print("Services Types")
         
-        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: 19.29625544000643, longitude: -99.18563856055731, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
+        self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
         
+        self.walletInit?.serviceTypes = [
+            "wallet-search": .both,
+            "airbaz-search": .adversting
+        ]
         self.walletInit?.showLocationText = true
         self.walletInit!.primaryFontSize = 10
         self.walletInit!.secondaryFontSize = 20
         
         self.walletInit!.timeOut = 60
-        
-       
     }
     
     private func changeAccount(accountNumber: String){

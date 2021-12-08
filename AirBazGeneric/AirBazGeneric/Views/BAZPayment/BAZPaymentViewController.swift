@@ -103,30 +103,10 @@ class BAZPaymentViewController: UIViewController, BAZPaymentViewProtocol {
     
     //MARK: - @IBActions
     @IBAction func goToResume(_ sender: UIButton) {
-        guard let textFieldText = amountTextField.text else { return }
-        let balance = UserDefaults.standard.double(forKey: "balance")
+        guard let accountNumber = UserDefaults.standard.string(forKey: "destinationNumber"),
+        let name = UserDefaults.standard.string(forKey: "name") else { return }
         
-        if textFieldText == "" {
-            let amount = 200.00
-            
-            if amount > balance {
-                warningLabel.isHidden = false
-            } else {
-                UserDefaults.standard.setValue("200.00", forKey: "amount")
-                correctNumberInTextField()
-            }
-        } else {
-            let text = textFieldText.replacingOccurrences(of: "$", with: "")
-            let amount = Double(text)!
-            
-            
-            if amount > balance {
-                warningLabel.isHidden = false
-            } else {
-                UserDefaults.standard.setValue(text, forKey: "amount")
-                correctNumberInTextField()
-            }
-        }
+        AirBazFacade().sendMessage(to: accountNumber, message: Message(text: name), serviceType: "wallet-search")
     }
     
     @IBAction func goBack(_ sender: UIButton) {

@@ -35,6 +35,8 @@
 	<array>
 		<string>_airbaz-search._tcp</string>
 		<string>_airbaz-search._udp</string>
+		<string>_wallet-search._tcp</string>
+		<string>_wallet-search._udp</string>
 	</array>
 	<key>NSContactsUsageDescription</key>
 	<string>Usaremos tus contactos para mostrate a quien le puedes enviar dinero</string>
@@ -46,6 +48,7 @@
 	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>location</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
