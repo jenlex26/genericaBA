@@ -272,15 +272,15 @@ extension BAZHomeViewController {
         
         self.walletInit = AirBazFacade()
         
-        print("Services Types")
-        
+
         self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
         
-        self.walletInit?.serviceType = "airbaz-search"
+        self.walletInit?.serviceType = "wallet-search"
         
         self.walletInit?.showLocationText = true
         self.walletInit!.primaryFontSize = 10
         self.walletInit!.secondaryFontSize = 20
+        self.walletInit?.modes = [.offline]
         
         self.walletInit!.timeOut = 60
     }
