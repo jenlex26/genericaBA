@@ -276,10 +276,8 @@ extension BAZHomeViewController {
         
         self.walletInit!.setData(accountNumber: accountNumber, name: String(nameSplit[0]), apPat: String(nameSplit[1]), phone: phone, latitude: lat, longitude: lng, primaryColor: color,enviroment: env, colors: [.systemGreen, .cyan])
         
-        self.walletInit?.serviceTypes = [
-            "wallet-search": .both,
-            "airbaz-search": .adversting
-        ]
+        self.walletInit?.serviceType = "airbaz-search"
+        
         self.walletInit?.showLocationText = true
         self.walletInit!.primaryFontSize = 10
         self.walletInit!.secondaryFontSize = 20

@@ -29,7 +29,7 @@ class BAZAirBazViewController: UIViewController, BAZAirBazViewProtocol {
         super.viewDidLoad()
         
         setView()
-        descriptionLbl.text = "serviceTypes: \(walletInit.serviceTypes)"
+        descriptionLbl.text = "serviceTypes: \(walletInit.serviceType)"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -108,7 +108,7 @@ extension BAZAirBazViewController: AirbazDelegate {
         Self.showSpinner()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 , execute: {
-            self.walletInit.inviteSession(accountNumber: accountNumber, serviceType: "wallet-search")
+            self.walletInit.inviteSession(accountNumber: accountNumber)
         })
     }
     
@@ -148,7 +148,7 @@ extension BAZAirBazViewController: AirBazSessionDelegate {
         print("AIRBAZGENERIC: Error :( \(error.localizedDescription)")
     }
     
-    func onMessage(message data: Data, serviceType: String) {
+    func onMessage(message data: Data) {
         print("AIRBAZGENERIC: Message nwn")
 
         let convertedString = String(data: data, encoding: String.Encoding.utf8)
@@ -165,7 +165,7 @@ extension BAZAirBazViewController: AirBazSessionDelegate {
         
         
         
-        sendNotification(body: "\(response.text ?? "No hay un mensaje 🚬") del canal \(serviceType)")
+        sendNotification(body: "\(response.text ?? "No hay un mensaje 🚬") ")
     }
 }
 

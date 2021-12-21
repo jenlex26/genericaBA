@@ -106,7 +106,7 @@ class BAZPaymentViewController: UIViewController, BAZPaymentViewProtocol {
         guard let accountNumber = UserDefaults.standard.string(forKey: "destinationNumber"),
         let name = UserDefaults.standard.string(forKey: "name") else { return }
         
-        AirBazFacade().sendMessage(to: accountNumber, message: Message(text: name), serviceType: "wallet-search")
+        AirBazFacade().sendMessage(to: accountNumber, message: Message(text: name))
     }
     
     @IBAction func goBack(_ sender: UIButton) {
